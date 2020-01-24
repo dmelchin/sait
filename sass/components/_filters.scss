@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Search Filters - programs & courses list
+   ========================================================================== */
+
+
+//---------------------- Searchbar (progams and courses) -------------------------
+
+.g-search-bar{
+	background: $bg-color-2;
+	margin: 2em 0 2.5em;
+	.g-form-control{
+		border: none;
+		background-color: $bg-color-2;
+		box-shadow: none;
+		line-height: 30px;
+	}
+	.g-form-group{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-bottom: 0;
+		@media (max-width: $max-break-mobile) {
+			height: 60px;
+			+ .g-form-group{
+				border-top: 3px solid #fff;
+			}
+		}
+		input[type="text"]{
+			font-size: 23px;
+			color: $grey-4;
+			padding-bottom: 0;
+			@media (max-width: $max-break-mobile) {
+				font-size: 20px;
+			}
+		}
+		select{
+			border-left: 1px solid $border-color;
+			border-radius: 0;
+			margin-right: 0 !important;
+		    width: auto;
+			@media (max-width: $max-break-mobile) {
+				border-left: none;
+				width: 100% !important;
+				@include g-font-large();
+				line-height: 25px;
+				padding-left: 0;
+			}
+		}
+	}
+}

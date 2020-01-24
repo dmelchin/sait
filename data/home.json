@@ -1,0 +1,24 @@
+[
+  {
+    "Title": "Registration Disruption",
+    "TitleVisible": "true",
+    "DivAlertClass": "banner-alert",
+    "DivHolderClass": "-oh-image-holder",
+    "IconClass": "ion-ios-information-outline",
+    "IconVisible": "true",
+    "DivWrapperClass": "g-container-md",
+    "DesktopDescription": "System upgrade June 25 - July 2.",
+    "MobileDescription": "June 25 - July 2",
+    "BtnText": "Find out more",
+    "BtnClass": "g-btn-2 btncenter",
+    "BtnLink": "https://www.sait.ca/student-life/student-services/technical-support/online-systems-disruption/",
+    "BtnVisible": "true",
+    "EventCategory": "Internal-Campaigns",
+    "EventAction": "Click-home-banner",
+    "EventLabel": "Banner-Upgrade-2019",
+    "StartDate": "2019/06/13 00:00",
+    "EndDate": "2019/07/02 05:59"
+  }
+]
+  
+

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   General page styles
+   ========================================================================== */
+
+//on interest lading page program course list heading
+.g-heading-right-link{
+	text-align: right;
+	margin-top: 15px;
+	@media (max-width: $max-break-tablet) {
+		text-align: left;
+		margin-top: 0;
+	}
+}
+
+.g-heading-right-link-2{
+	text-align: right;
+	margin-top: 8px;
+	@media (max-width: $max-break-mobile) {
+		text-align: left;
+		margin-top: 0;
+		margin-bottom: 8px;
+	}
+}
+
+.g-heading-right-link-3{
+	text-align: right;
+	@media (max-width: $max-break-mobile) {
+		text-align: left;
+	}
+}
+
+
+.map-img{
+	float: left;
+	+ a{
+		margin: 20px;
+	}
+}
+
+.g-article-info{
+	.g-h4{
+		margin: 0;
+		padding: 8px 0 0 0;
+	}
+	@media (max-width: $max-break-mobile) {
+		.g-text-right{
+			text-align: left;
+			margin-top: 10px
+		}
+	}
+}
+
+img.g-top{
+	margin-bottom: 20px;
+    margin-top: -110px;
+    width: 110px;
+    height: auto;
+    @media (max-width: $max-break-tablet) {
+    	margin-top: -70px;
+    }
+}
+
+    

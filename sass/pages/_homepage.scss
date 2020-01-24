@@ -1,0 +1,1757 @@
+/* ==========================================================================
+   Homepage Specific Styles
+   ========================================================================== */
+
+//---------------------- Overlay ---------------------------------
+
+@mixin smallscreen{
+    @media (max-width: 375px){
+      @content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @mixin minitab{
+    @media (max-width: 660px){
+      @content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }  
+
+@mixin tab{
+    @media (max-width: 900px){
+      @content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @mixin larger{
+    @media (min-width: 901px){
+      @content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @mixin xlarger{
+    @media (min-width: 1040px){
+      @content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+
+#remday{
+    text-align: center;
+    margin: 0 auto;
+    border-top: 15px solid #000;
+    border-bottom: 15px solid #000;
+    img{
+        @include xlarger{
+            max-width: 300px !important;
+        }
+        @include larger{
+            max-width: 190px;
+        }
+        @include tab{
+            max-width: 200px;
+        }
+        @include minitab{
+            max-width: 220px;
+        }
+        @include smallscreen{
+            max-width: 150px;
+        }
+    }
+    h2{
+        font-size: 3em;
+        padding-bottom: 0;
+        color: #b7000d;
+        @media (min-width: 1600px){
+            margin: 3em 0 0 0;
+        }
+
+        @media (min-width: 1000px) and (max-width: 1599px){
+            margin: 1.5em 0 0 0;
+        }
+        @include minitab{
+            font-size: 2em;
+            margin: 1.35em 0 .5em 0;
+            padding: 0;
+        }
+        @include smallscreen{
+            margin: 2em 0 0 0;
+        }
+    }
+
+    h3{
+        color: #382c28;
+        padding: 0;
+        margin: 0;
+        @include minitab{
+            font-size: 1.2em;
+            margin: .5em 0;
+            padding: 0;
+        }
+        @include smallscreen{
+            font-size: 1em;
+            margin: 0;
+        }
+    }
+
+    @include minitab{
+        border-top: none !important;
+        border-bottom: none !important;
+    }
+
+
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+
+	@media (max-width: 1700px){
+		height: 700px;
+	}
+
+    @media (min-width: 1400){
+        position: relative;
+        top: 40% !important;
+    }
+
+    @media (min-width: $max-break-mobile-nav) and (max-width: 1000px){
+        //top: 45% !important;
+    }
+
+    @media (max-width: $max-break-mobile-nav){
+        //top:9% !important;
+    }
+
+    .g-btn-lg{
+		box-shadow: 1px 1px 7px rgba(0,0,0,.5);
+        color: white !important;
+        margin-top: 15px;
+
+        @media (max-width: $min-break-mobile-nav) {
+            margin-top: 15px !important;
+        }
+
+		&:hover{
+		    box-shadow: 1px 1px 10px rgba(0,0,0,.8);
+		}
+
+        
+	}
+}
+
+.overlay .banner-content
+{
+    position: relative !important; 
+
+     @media (min-width: 1400px){
+        position: relative; 
+        top: 40% !important;
+    }
+    
+     @media (min-width: $max-break-mobile-nav) and (max-width: 1000px){
+        
+         top: 45% !important;
+        }
+
+     @media (max-width: $max-break-mobile-nav) {
+            top: 9% !important;
+     }
+}
+    .overlay video {
+        width: 100%;
+        height: 100%;
+        max-height: 800px;
+        object-fit: fill;
+
+    }
+
+#image-msg-overlay
+{
+    @media (min-width:100px) and (max-width: 800px) {
+        padding-top: 145px;
+    }
+
+    @media (min-width:801px) and (max-width: 1399px) {
+        padding-top: 190px;
+    }
+
+    @media (min-width: 1400px){
+        padding-top: 250px;
+    }
+
+}
+
+#image-msg-overlay h2 {
+    color: #FFF !important;
+    line-height:1.1em !important;
+    max-width:1000px !important;
+    text-shadow: none !important;
+    margin: 0 0 .4em !important;
+    font-family: Titillium Web,sans-serif !important;
+    font-weight: 300 !important;
+    //font-size: 65px !important;
+    padding-left: 0 !important;
+    margin-top: 0 !important;
+
+    @media (min-width: 1400px){
+        text-shadow: none !important;
+        font-size: 3.15em !important;
+    }
+
+    @media (min-width:1200px) and (max-width: 1400px){
+        font-size: 3em !important;
+    }
+
+    @media (min-width:1100px) and (max-width: 1200px){
+        font-size: 2.3em !important;
+    }
+
+    @media (min-width:100px) and (max-width:1099px){
+        font-size: 1.5em !important;
+    }
+
+}
+
+#image-msg-overlay h3
+{
+    font-size: 1.3em;
+    color: #FFF;
+
+    @media (min-width: 1400px){
+        font-size: 1.3em !important;
+    }
+
+    @media (min-width:1100px) and (max-width: 1200px){
+        font-size: 1.2em !important;
+    }
+
+    @media (min-width:100px) and (max-width:1099px){
+        font-size: 1em !important;
+    }
+}
+
+#image-msg-overlay p
+{
+    @media (min-width:100px) and (max-width: 551px) {
+        display: none;
+    }
+
+    
+    
+}
+
+#video-msg-overlay
+{
+    position: absolute;
+    color: #FFF;
+    text-align: center;
+    width: 50%;
+    padding: 10px 0;
+
+    @media (min-width:1200px){
+        top: 20%;
+        width: 54%;
+        left: 25%;
+    }
+    @media (min-width:1100px) and (max-width: 1200px){
+        top: 20%;
+        left: 15%;
+        width: 76%;
+    }
+
+    @media (min-width:100px) and (max-width:1099px){
+        top: 20%;
+        left: 4%;
+        width: 94%;
+    }
+}
+    
+#video-msg-overlay h2
+{
+    color: #FFF !important;
+    line-height:1.1em !important;
+    text-shadow: 1px 2px 5px #000;
+    margin: 0 0 .4em !important;
+    font-family: Titillium Web,sans-serif !important;
+    font-weight: 300 !important;
+    //font-size: 65px !important;
+    padding-left: 0 !important;
+    margin-top: 0 !important;
+
+    @media (min-width: 1400px){
+        font-size: 6em !important;
+    }
+
+    @media (min-width:1100px) and (max-width: 1200px){
+        font-size: 2.7em !important;
+    }
+
+    @media (min-width:100px) and (max-width:1099px){
+        font-size: 3.1em !important;
+    }
+}
+
+#video-msg-overlay h3
+{
+    font-size: 1.3em;
+
+    @media (min-width: 1400px){
+        font-size: 2em !important;
+    }
+
+    @media (min-width:1100px) and (max-width: 1200px){
+        font-size: 2em !important;
+    }
+
+    @media (min-width:100px) and (max-width:1099px){
+        font-size: 1.1em !important;
+    }
+}
+
+.promo, .promo a{
+    text-shadow: none;
+    color: #FFF !important;
+    font-weight: 400;
+    font-size: 1.35em;
+    line-height: 1.9em;
+    //text-shadow: 1px 2px 5px #000;
+
+    @media (min-width: 1400px){
+        font-size: 1.35em;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1400px){
+        font-size: 1.2em;
+    }
+
+    @media (min-width: 100px) and (max-width: 1200px){
+        font-size: 1.2em;
+        line-height: 1.6em;
+    }
+
+    @media (max-width: $max-break-mobile-nav){
+        line-height: 1.5em;
+    }
+}
+
+
+.overlay a {
+    /* text-shadow: 2px 2px #000; */
+    /* color: azure; */
+}
+
+.overlay a, .overlay h2, .overlay h3, .overlay h4 {
+    /* color: #fff; */
+    /* font-weight: 700; */
+}
+
+.overlay .g-btn a{
+color: #fff !important;
+margin-top:1.5em;
+}
+
+.overlay .g-btn a:visited{
+color: #fff !important;
+}
+
+
+.overlay h3
+{
+    //font-size: 200% !important;
+    //text-shadow: 1px 2px 5px #000; 
+    //padding-left: 105px;
+    //margin-top: -70px;
+}
+
+#hp-banner .overlay {
+    display: block;
+    position:absolute;
+    top: 0px !important;
+}
+
+
+
+
+#overlay-btn {
+    position: absolute;
+    top: 0;
+    left: 96%;
+    width: 34px;
+    height: 34px;
+    z-index: 100;
+    background-color: black;
+    padding: 9px 2px 2px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    line-height: 10px;
+    border-radius: 50%;
+    background: url("/prebuilt/img/banners/close-button.png");
+    @include larger{
+        // top: -2em;
+        // left: 92%;
+    }
+        @include tab{
+        top: -2.5em;
+        left: 93%;
+    }
+    @include minitab{
+        top: -1em;
+        left: 91%;
+    }
+    @include smallscreen{
+        top: -2em;
+        left: 89%;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+    #overlay-btn a {
+        opacity: 0.5;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+#overlay-btn:active {
+    background: url("/prebuilt/img/banners/close-button-tapped.png");
+}
+
+
+
+#video-overlay {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    color: #FFF;
+    text-align: center;
+    /*background-color: rgba(221, 221, 221, 0.3);*/
+    width: 50%;
+    padding: 10px 0;
+
+    
+
+    @media (max-width: $max-break-mobile-nav){
+        top: 0%;
+    }
+}
+
+@media (max-width: 940px) {
+    #video-overlay {
+        font-size: 95%;
+    }
+}
+
+@media (max-width: 520px) {
+    #video-overlay {
+        font-size: 58%;
+    }
+}
+
+
+//---------------------- Revenue Section -------------------------
+
+.g-revenue-section{
+	.col-1of2{
+ 		margin-bottom: 2em;
+ 		@media (max-width: $max-break-tablet) {
+ 			text-align: left;
+ 		}
+ 		+ .col-1of2{
+ 			margin-bottom: 0;
+ 		}
+ 	}
+}
+
+.g-revenue-section-menu{
+	text-align: center;
+	text-transform: uppercase;
+	margin: 2em 0 5em;
+	a{
+		color: $grey-4;
+		display: block;
+		position: relative;
+		float: left;
+		width: 33%;
+		border-right: 1px solid $border-color2;
+		@extend .g-font-small;
+		line-height: 40px;
+		&:last-child{
+			border-right: none;
+		}
+		&.g-active{
+			color: $brand-1;
+			&:after{
+			    bottom: -10px;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-top-color: $brand-1;
+				border-width: 7px;
+				margin-left: -7px;
+			}
+		}
+		&:hover{
+			color: $brand-1;
+		}
+	}
+	&:after{
+   		@include clearfix();
+ 	}
+ 	@media (max-width: $max-break-tablet) {
+ 		margin: 2em 0 1em;
+ 		a{
+			border-right: none;
+			width: 100%;
+			&.g-active{
+				display: block;
+				&:after{
+			    	bottom: -4px;
+			    }
+			}
+		}
+ 	}
+}
+
+//---------------------- Full Image Section -------------------------
+
+.hp-img-section{
+	img{
+		width: 100%;
+		height: auto;
+	    display: block;
+	}
+}
+
+//---------------------- Why SAIT Section -------------------------
+
+.hp-img-section-2{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    h3{
+    	padding-top: 50px;
+    	@media (max-width: $max-break-mobile) {
+    		padding-top: 0;
+    	}
+    }
+}
+
+//---------------------- Recently Viewed Programs -------------------------
+.hide
+{
+    visibility: hidden;
+}
+
+.slideDown{
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+
+	animation-duration: 0.5s;	
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;					
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+	
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+	}
+	100%{
+		-webkit-transform: translateY(0%);
+	}	
+}
+
+//---------------------- Promotional Components -------------------------
+
+/* 
+    -chp- Shorthand for "Campaign Home Page"
+*/
+#-chp-applications-open{
+    background: rgb(50,64,83);
+    background: linear-gradient(0deg, rgba(50,64,83,1) 0%, rgba(0,94,184,1) 70%, rgba(0,163,224,1) 100%); 
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+    .borderland{
+      display: block;
+      width: 100%;
+      max-height: 1px;
+      background: #fff;
+    }
+  }
+
+  #-chp-applications-open-admissions{
+    background: rgb(50,64,83);
+    background: linear-gradient(0deg, rgba(50,64,83,1) 0%, rgba(0,94,184,1) 70%, rgba(0,163,224,1) 100%); 
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+    .borderland{
+      display: block;
+      width: 100%;
+      max-height: 1px;
+      background: #fff;
+    }
+  }  
+
+.-apps-open-wrapper {
+    p{
+        font-size: 1.35em;
+        line-height: 1.5em;
+        padding: 1.5em 0;
+        margin-bottom: 0 !important;
+        @include lg{
+            padding: 1em .5em;
+        }
+        @include md{
+            font-size: 1.15em;
+            padding: .75em .35em;
+        }
+        @include sm{
+            font-size: 1em;
+            padding: .65em .25em;
+        }
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    a.lessbold{
+        font-weight: normal;
+        margin-right: 1em;
+    }  
+    .g-icon-right {
+        font-size: 1.2em;
+        position: relative;
+        bottom: -2px;
+        @include md{
+            font-size: 1em;
+        }
+    }
+}
+  
+.-apps-open-wrapper-sub {
+    p{
+        font-size: 1.1em;
+        line-height: 1.1em;
+        padding: 1.1em 0;
+        margin: 0 !important;
+        @include lg{
+            padding: 1em .5em;
+            font-size: 1em;
+            line-height: 1em;
+        }
+        @include md{
+            font-size: .875em;
+            padding: .5em .25em;
+        }
+        @include sm{
+            font-size: .75em;
+            padding: .35em .2em;
+        }
+    }
+}   
+
+/* 
+    Info Sessions 2019 & CEIN
+*/
+
+.reds{
+    background: #164076;
+}
+
+
+#-blue-gradient {
+    background-image: linear-gradient(0deg, #00A1D7 0%, #0068A9 97%);
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+    padding: 20px 10px;
+
+    .g-container {
+        position: relative;
+
+        h3 {
+            font-size: 1.75em;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+
+            @include minitab {
+                font-size: 1.35em;
+                margin: 0;
+                display: inline-block;
+                /*max-width: 50%;*/
+            }
+
+            @include smallscreen {
+                font-size: 1.15em;
+            }
+        }
+
+        p {
+            font-size: 1.125em;
+            color: #fff;
+            padding-top: 0;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+
+            @include minitab {
+                font-size: 0.92em;
+            }
+        }
+    }
+}
+
+
+#-is-start{
+    background: linear-gradient(to top, #a00320, transparent), url("https://www.sait.ca/assets/prebuilt/img/campaign-assets/2019/is/2019-info-sessions-red-bg.jpg");
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+
+    .g-btn-2{
+        background: #fff !important;
+        cursor: pointer;
+        color: #cc0000 !important; 
+        @include smallscreen {
+            top: .5em;
+        }
+        &:hover{
+            color: #cc0000 !important; 
+        }
+    }
+
+    &--fixed {
+  
+    position: relative;
+      &.js-is-fixed {
+        position: fixed;
+        top: 0; 
+      }
+      &.js-is-fixed-stuck {
+        bottom: 0;
+        position: absolute;
+        top: auto;
+      }
+    }
+    z-index: 10;
+    .borderland{
+        display: block;
+        width: 100%;
+        max-height: 1px;
+        background: #2e9adc;
+        clear: both;
+    }
+  }
+
+/* 
+    Open House 2018 // TOUR DAYS 2019
+
+
+
+#-oh-start{
+    background: linear-gradient(to top, #333795, transparent), url("https://www.sait.ca/assets/prebuilt/img/campaign-assets/openhouse18/2018-oh-hp-start.jpg") no-repeat center;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+    &--fixed {
+  
+    position: relative;
+      &.js-is-fixed {
+        position: fixed;
+        top: 0; 
+      }
+      &.js-is-fixed-stuck {
+        bottom: 0;
+        position: absolute;
+        top: auto;
+      }
+    }
+    z-index: 10;
+    .borderland{
+        display: block;
+        width: 100%;
+        max-height: 1px;
+        background: #00A3E0;
+        clear: both;
+    }
+  }
+  
+.blues{
+    background: #235CAD;
+}
+
+  .g-container-md{
+      margin-right: auto;
+      margin-left: auto;
+    min-height: 140px;
+    position: relative;
+    @include smallscreen{
+      min-height: 85px;
+    } 
+    @include tab{
+      width: 90%;
+    } 
+    @include larger{
+        width: 90%;
+        max-width: 1000px;
+    }
+    .modme{
+      display: inline-block;
+      @include smallscreen{
+        display: none !important;
+        background: green;
+      }
+      @include tab{
+         display:block;
+      }
+      @include larger{
+         display:block;
+      }
+      @include xlarger{
+         display:inline-block;
+      }
+    }
+        a{
+          color: white;
+          text-decoration: none;
+          padding-bottom: 1em;
+          @include smallscreen{
+            font-size: .675em;
+            margin-bottom: 0;
+          }
+          @include tab{
+            margin-top: 1em;
+            font-size: .675em;
+                      margin-bottom: 1em;
+          }
+          @include larger{
+            float: none;
+            font-size: .675em;
+            position: static;
+            top: auto;
+            left: auto;
+            transform: none;
+            margin-top: .75em;
+          }
+          @include xlarger{
+            font-size: .875em;
+               float: right;
+          position: relative;
+          top: 25%;
+  
+            
+          }
+      }
+    .-oh-image-holder{
+      float: left; 
+      display: inline-block; 
+      padding-right: 50px;
+      @include smallscreen{
+        padding-right: 20px;
+        width: 50%;
+      }
+    }
+  }
+  
+  .-oh-open-wrapper {
+  
+      p{
+          font-size: 1.35em;
+          line-height: 1.25em;
+          padding: .75em 0;
+          margin-bottom: 0 !important;
+        @include xlarger{
+           font-size: 1.5em;
+          line-height: 1.25em;
+          padding: 1.25em 0;       
+        }
+  
+        @include tab{
+          font-size: 1.25em;
+          display: inline-block;
+          padding: 0 0;
+          position: relative;
+        }
+        @include smallscreen{
+          display: inline;
+          float: right;
+          top: 0;
+          position: absolute;
+          
+          
+        }
+      }
+  
+  }
+
+*/
+
+
+  
+  #-oh-start{
+    background: linear-gradient(to top, #333795, transparent), url("https://www.sait.ca/assets/prebuilt/img/campaign-assets/openhouse18/2018-oh-hp-start.jpg") no-repeat center;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
+    z-index: 10;
+
+    .borderland{
+        display: block;
+        width: 100%;
+        max-height: 1px;
+        background: #00A3E0;
+        clear: both;
+    }
+  }
+
+.g-container-md {
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 140px;
+    position: relative;
+
+    @include smallscreen {
+        min-height: 110px;
+    }
+
+    @include tab {
+        width: 90%;
+    }
+
+    @include larger {
+        width: 90%;
+        max-width: 1000px;
+    }
+
+    .modme {
+        display: inline-block;
+
+        @include smallscreen {
+            display: none !important;
+        }
+
+        @include tab {
+            display: block;
+        }
+
+        @include larger {
+            display: block;
+        }
+
+        @include xlarger {
+            display: inline-block;
+        }
+    }
+
+    a:not(.lnk-learn-more) {
+        color: white;
+        text-decoration: none;
+
+        @include smallscreen {
+            font-size: .675em;
+        }
+
+        @include tab {
+            margin-top: 1em;
+        }
+
+        @include larger {
+            float: none;
+            font-size: .675em;
+            position: static;
+            top: auto;
+            left: auto;
+            transform: none;
+            margin-top: .75em;
+        }
+
+        @include xlarger {
+            font-size: .875em;
+            float: right;
+            position: relative;
+            top: 50%;
+            margin: auto;
+            transform: translate(0, 50%);
+        }
+    }
+
+    .-oh-image-holder {
+        float: left;
+        display: inline-block;
+        padding-right: 60px;
+
+        @include smallscreen {
+            padding-right: 20px;
+            width: 40%;
+        }
+    }
+}
+
+  .-oh-open-wrapper {
+  
+      p{
+          font-size: 1.75em;
+          line-height: 1.25em;
+          padding: 1.25em 0;
+          margin-bottom: 0 !important;
+          text-align: center;
+        @include tab{
+          font-size: 1.25em;
+          display: inline-block;
+          position: relative;
+          padding: .5em 0;
+        }
+        @include smallscreen{
+            display: inline;
+            float: right;
+            top: 0;
+            position: absolute;
+          }
+        }
+    }
+
+/* FOR ALL PAGES - OPEN HOUSE FEB 2019 */
+
+#oh-banner-bottom{
+    position: fixed !important;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: .5em 1em;
+    z-index: 19;
+    background-image: url(https://www.sait.ca/assets/prebuilt/img/campaign-assets/openhouse18/2018-oh-hp-start.jpg) !important;
+
+    a{
+        display: inline !important;
+        text-shadow: none;
+        padding: 1.5em;
+        color: #fff !important;
+        font-weight: bold;
+
+    }
+    .gd-desk{
+        @include tab{
+            display: none !important;
+        }
+    }
+    .cookieSet{
+        float: right;
+        display:inline !important;
+        font-size: 1.4em;
+        cursor: pointer;
+        @include smallscreen{ 
+            font-size: 1em;
+            padding-right: 1em;
+        }
+    }  
+    @include tab{
+        padding: .75em;
+        font-weight: normal;
+     }
+    @include smallscreen{ 
+        padding: .5em 0;
+        background-position: 100%;
+        font-size: .75em;
+      }
+}
+
+/* FOR ALL PAGES - GIVING DAY 2018 */ 
+
+#gd-banner-bottom{
+    position: fixed !important;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: .5em 1em;
+    z-index: 19;
+    background-image: linear-gradient(to bottom, #a6192e, #b41b2c, #c11e28, #ce2323, #da291c) !important;
+
+    a{
+        display: inline !important;
+        text-shadow: none;
+        padding: 1.5em;
+        color: #ffd965 !important;
+        font-weight: bold;
+
+    }
+    .gd-desk{
+        @include tab{
+            display: none !important;
+        }
+    }
+    .cookieSet{
+        float: right;
+        display:inline !important;
+        font-size: 1.4em;
+        cursor: pointer;
+        @include smallscreen{ 
+            font-size: 1em;
+            padding-right: 1em;
+        }
+    }  
+    @include tab{
+        padding: .75em;
+        font-weight: normal;
+     }
+    @include smallscreen{ 
+        padding: .5em 0;
+        background-position: 100%;
+        font-size: .75em;
+      }
+}
+
+/* For Tour Days - *** I need a campaign sheet in the future to keep all this separate */
+
+
+
+#-tour-days{
+    min-height: 75px;
+    position: relative;
+    background: linear-gradient(to top, #333795, transparent), url(https://www.sait.ca/assets/prebuilt/img/campaign-assets/openhouse18/2018-oh-hp-start.jpg);
+    // background: url(https://www.sait.ca/assets/prebuilt/img/campaign-assets/2019/td/2019-1-campus-tours-thin.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center; 
+    background-color: #024279; 
+    overflow: auto; 
+    margin-bottom: 1.5em; 
+    width: 100%;
+
+    .g-container{
+        position: relative;
+        h3{
+            font-size: 1.75em;   
+            color: #fff; 
+            margin: 0; 
+            padding: 0;
+            @include minitab{
+                font-size: 1.35em;
+                margin: 0;
+                display: inline-block;
+                max-width: 50%;
+            }
+            @include smallscreen{
+                font-size: 1.15em;
+            }
+        }
+        p{
+            font-size: 1.125em; 
+            color: #fff; 
+            padding-top: 0; 
+            margin-top: 0; 
+            margin-bottom: 1.5em;
+
+            @include minitab { 
+                display: none;
+              }
+        }
+        .g-btn-2{
+            margin-top: 1em;
+        }
+    }
+
+    .ctastrict{
+        background: #fff !important; 
+        position: absolute; 
+        top: 8px; 
+        right: 30px; 
+        display: inline;
+        &:hover{
+            color: #000 !important;
+        }
+        @include tab{
+            top: 20px;
+        }
+        @include minitab { 
+            top: 0px;
+          }
+          @include smallscreen { 
+            display: inline-block;
+            position: relative;
+            left: 1em;
+            margin: 1em 0;
+            top: -13px;
+          }
+    }
+}
+
+
+/* For Con Ed Info Night - I need a campaign sheet in the future to keep all this separate */
+
+.ifmobileiwillbegone{
+    display: block;
+    @include tab{
+        display: none;
+    }
+    @include smallscreen { 
+        display: none;
+      }
+}
+
+.ifmobileiwillbehere{
+    display: none;
+    @include tab{
+        display: block
+    }
+    @include smallscreen{
+        display: block;
+    }
+    a{
+        text-shadow: none !important;
+    }
+    h3{
+        padding: .5em 0 0 0 !important;
+    }
+}
+
+#-cedin-nov{
+    min-height: 75px;
+    position: relative;
+    background: url(https://sait.ca/assets/prebuilt/img/campaign-assets/2019/is/3/2019-3-mm-bg-info-sessions.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center; 
+    background-color: #ca0529; 
+    overflow: auto; 
+    margin-bottom: 1.5em; 
+    width: 100%;
+
+    .g-container{
+        position: relative;
+        h3{
+            font-size: 1.75em; 
+            color: #fff; 
+            margin: 0; 
+            padding: 0;
+            @include minitab{
+                font-size: 1.35em;
+                margin: 0;
+                display: inline-block;
+                max-width: 50%;
+            }
+            @include smallscreen{
+                font-size: 1.15em;
+            }
+        }
+        p{
+            font-size: 1.125em; 
+            color: #fff; 
+            padding-top: 0; 
+            margin-top: 0; 
+            margin-bottom: 1.5em;
+
+            @include minitab { 
+                display: none;
+              }
+        }
+        .g-btn-2{
+            margin-top: 1em;
+        }
+    }
+
+    .ctastrict{
+        background: #fff !important; 
+        position: absolute; 
+        top: 20px; 
+        right: 30px; 
+        display: inline;
+        &:hover{
+            color: #000 !important;
+        }
+        @include tab{
+            top: 20px;
+        }
+        @include minitab { 
+            top: 0px;
+          }
+          @include smallscreen() { 
+            display: inline-block;
+            position: relative;
+            left: 1em;
+            margin: 1em 0;
+            top: -13px;
+          }
+    }
+}
+
+/* For P&C Page - I need a campaign sheet to keep this all separate */
+
+
+   
+        #ctagrrrr{
+            background: #fff !important; 
+            border: 2px solid #A2052E;
+            border-radius: 60px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0;            
+            padding: 0 27px;
+            font-size: 1em;
+            line-height: 43px;
+            height: 45px;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-size: 200%;
+            background-position: center center;
+            border: none;
+            border-radius: 60px;
+            font-family: "Titillium Web", sans-serif;
+            color: #A2052E;
+            border: 1px solid #DA291C;
+            text-decoration: none;
+            outline: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            &:hover{
+                color: #000 !important;
+            }
+         }      
+    
+         
+   
+#-is-nov{
+    min-height: 75px;
+    position: relative;
+    background: url(https://sait.ca/assets/prebuilt/img/campaign-assets/2019/is/3/2019-3-mm-bg-info-sessions.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center; 
+    background-color: #cf261b; 
+    overflow: auto; 
+    //margin-bottom: 1.5em; 
+    width: 100%;
+
+    .g-container{
+        position: relative;
+        h3{
+            font-size: 1.75em; 
+            color: #fff; 
+            margin: 0; 
+            padding: 0;
+            @include minitab{
+                font-size: 1.35em;
+                margin: 10px 0 0 0;
+            }
+        }
+        p{
+            font-size: 1.125em; 
+            color: #fff; 
+            padding-top: 0; 
+            margin-top: 0; 
+            margin-bottom: 1.5em;
+
+            @include minitab { 
+                display: none;
+              }
+        }
+    }
+
+    .ctastrict{
+        background: #fff !important; 
+        position: absolute; 
+        top: 20px; 
+        right: 30px; 
+        display: inline;
+        &:hover{
+            color: #000 !important;
+        }
+        @include minitab { 
+            top: 0px;
+          }
+          @include smallscreen() { 
+            display: inline-block;
+            position: relative;
+            left: .1em;
+            margin: 1em 0;
+          }
+    }
+}
+
+
+
+/* THIS IS FOR PROGRAMS AND COURSES PAGE BUT IT MAKES MORE SENSE TO HAVE IT HERE NEXT TO THE OTHER OPEN HOUSE STUFF */
+
+
+#-oh-start-pc{
+    background: linear-gradient(to top, #333795, transparent), url("https://www.sait.ca/assets/prebuilt/img/campaign-assets/openhouse18/2018-oh-hp-start.jpg") no-repeat center;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    color: #fff;
+    @include smallscreen{
+        display: block;
+        min-height: 110px;
+      }    
+    @include tab{
+        display: none;
+    } 
+  } 
+  
+  .g-container-mdpc{
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 100px;
+    position: relative;
+    @include smallscreen{
+        min-height: 110px;
+      }    
+    @include tab{
+        width: 90%;
+    } 
+    @include larger{
+        width: 93%;
+        max-width: 1000px;
+    }
+    .modme{
+        display: inline-block;
+        @include smallscreen{
+          display: none !important;
+        }
+        @include tab{
+           display:block;
+        }
+        // @include larger{
+        //    display:block;
+        // }
+        @include xlarger{
+           display:inline-block;
+        }
+      }
+    a{
+        color: white;
+        text-decoration: none;
+        @include smallscreen{
+            font-size: .675em;
+          }
+        @include tab{
+            margin-top: 1em;
+            float: none;
+            position: static;
+            top: auto;
+            left: auto;
+            transform: none;
+            margin-top: .75em;
+        }
+        @include larger{
+        float: right;
+        font-size: .675em;
+
+        }
+        @include xlarger{
+        font-size: .875em;
+            float: right;
+        position: relative;
+        top: 50%;
+        margin: auto;
+        transform: translate(0, 50%);     
+        }
+    }
+    .-oh-image-holder{
+        float: left; 
+        display: inline-block; 
+        padding-right: 60px;
+        @include smallscreen{
+          padding-right: 20px;
+          width: 40%;
+        }
+      }
+    }
+
+  .-oh-open-wrapperpc {
+  
+      p{
+          font-size: 1.25em;
+          line-height: 1.25em;
+          padding: 1.25em 0;
+          margin: 0 !important;
+        @include tab{
+          font-size: 1em;
+          display: inline-block;
+          position: relative;
+        }
+        @include smallscreen{
+            display: inline;
+            float: right;
+            top: 0;
+            position: absolute;
+          }
+        }
+    }
+
+/* THIS IS FOR THE LARGER ONE CLOSER TO OPEN HOUSE */
+
+.-chp-oh-wrapper{
+    padding: 2em;
+    background: url("https://www.sait.ca/assets/prebuilt/img/campaign-assets/openhouse18/2018-oh-background-home-midcompo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 25px;
+    background-position: 100% 100%;
+    background-size: 120% 120%;
+    background-position: center center;
+  }
+  
+  section#oh18{
+    color: #005EB8;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  
+  .-chp-oh-wrapper > h3{
+    font-size: 2.9em;
+    color: #005EB8 !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: .2em 0 0 0;
+    margin: 1em 0 0 0;
+  }
+  
+  .-chp-oh-wrapper > p{
+    line-height:1.6em;
+    margin:0;
+    padding: 0;
+    font-size: 1.45em;
+  }
+  
+  .-chp-oh-wrapper > a > button {
+    display:flex;
+    justify-content:center;
+    background: #DA291C;
+    color:white;
+    border:none;
+    border-radius:25px;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    transition:all 0.8s linear;
+    cursor: pointer;
+    width: 200px;
+    display: inline;
+    padding: 0 22px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase; 
+    animation: 
+      syw-fadeIn .4s 1.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+  }
+  
+  #oh18 > .borderland{
+    display: block;
+    width: 100%;
+    max-height: 3px;
+    background: linear-gradient(132deg, #005EB8, #00A3E0);
+    background-size: 400% 400%;
+    -webkit-animation: syw-BorderChange 9s ease infinite;
+    -moz-animation: syw-BorderChange 9s ease infinite;
+    -o-animation: syw-BorderChange 9s ease infinite;
+    animation: syw-BorderChange 9s ease infinite;
+  }
+  
+  // ANIMATIONS Button first
+  @keyframes syw-fadeIn {
+    from {opacity:0;}
+    to{ opaticy: 1;}
+  }
+  
+  // Border Animations
+  @-webkit-keyframes syw-BorderChange {
+      0%{background-position:0% 7%}
+      50%{background-position:100% 94%}
+      100%{background-position:0% 7%}
+  }
+  @-moz-keyframes syw-BorderChange {
+      0%{background-position:0% 7%}
+      50%{background-position:100% 94%}
+      100%{background-position:0% 7%}
+  }
+  @-o-keyframes syw-BorderChange {
+      0%{background-position:0% 7%}
+      50%{background-position:100% 94%}
+      100%{background-position:0% 7%}
+  }
+  @keyframes syw-BorderChange {
+      0%{background-position:0% 7%}
+      50%{background-position:100% 94%}
+      100%{background-position:0% 7%}
+  }
+
+
+  /**************** tourism **********************/
+.lgt-blue {
+    background-color: #2352A7;
+    min-height: 95px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+
+    .lnk-learn-more {
+        color: hsla(0,0%,100%,.75);
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .lnk-learn-more:hover, .lnk-learn-more:visited, .lnk-learn-more:focus {
+        color: #fff;
+    }
+
+    .g-container-md {
+        min-height: 95px;
+    }
+
+    .-oh-image-holder {
+        margin-right: 20px;
+    }
+
+    .-oh-open-wrapper p {
+        padding: .5em 0;
+        display: block;
+    }
+
+    .g-container-md .modme {
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .g-container-md .-oh-image-holder {
+        padding-right: 80px;
+    }
+
+    @media(min-width:901px) {
+        .g-container-md {
+            max-width: 850px;
+        }
+    }
+
+    @media(max-width:900px) {
+        .-oh-open-wrapper p {
+            padding: .95em 0;
+        }
+
+        .g-container-md {
+            min-height: 110px;
+        }
+
+        .g-container-md .-oh-image-holder {
+            padding-right: 30px;
+        }
+    }
+
+    @media(max-width:375px) {
+
+        .g-container-md .modme {
+            display: inline-block !important;
+        }
+
+        .lnk-learn-more, .g-container-md .modme {
+            font-size: 14px;
+        }
+
+        .-oh-image-holder {
+            margin-right: 0px;
+            width: 30%;
+        }
+
+        .-oh-open-wrapper p {
+            left: 32%;
+        }
+    }
+}
+
+    @media(min-width: 1040px) {
+        .lnk-learn-more {
+            float: right;
+        }
+
+        .lgt-blue .-oh-open-wrapper p {
+            padding: .95em 0;
+        }
+    }
+
+
+/**************************** Flexbox banner  **********************************/
+.flex-banner-top {
+    min-height: 75px;
+    background: url(https://sait.ca/assets/prebuilt/img/campaign-assets/2019/is/3/2019-3-mm-bg-info-sessions.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-color: #ca0529;
+    width: 100%;
+
+    .flex-container-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 2em;
+    }
+
+    .flex-wrap-content {
+        flex-grow: 1;
+    }
+
+    .flex-button {
+        flex: 1;
+        flex-basis: 170px;
+        max-width: 170px;
+    }
+
+    .flex-btn-color {
+        background: #fff !important;
+    }
+    .txt-clr-w{
+        color:#fff !important;
+    }
+    h3{
+        padding:0;
+        margin:0;
+    }
+}

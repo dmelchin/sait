@@ -1,0 +1,28 @@
+﻿/* ==========================================================================
+   Google Translate
+   ========================================================================== */
+
+#google_translate_element {
+    float: right;
+    display: none;
+    
+
+    @media (max-width: $max-break-mobile) {
+        margin: 20px 5% 0px 0px;
+    }
+}
+
+.goog-te-gadget {
+    font-family: Titillium Web, sans-serif;
+    color: #324053;
+    padding: 0.25em 0;
+}
+
+.goog-te-gadget-simple {
+    border-radius: 8px;
+}
+
+.goog-te-menu-value {
+    color: black !important;
+}
+

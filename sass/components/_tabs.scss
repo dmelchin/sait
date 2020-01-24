@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Tabs
+   ========================================================================== */
+
+//---------------------- Program page tabs -------------------------
+
+.program-tab{
+	display: none;
+}
+
+#highlights{
+	display: block;
+}
+
+//---------------------- General tab styling (program page) -------------------------
+
+.g-tabs-container{
+	min-height: 50px;
+	border-bottom: 1px solid $border-color;
+	text-align: right;
+	margin-bottom: 1em;
+	&:after{
+		@include clearfix();
+	}
+	@media (max-width: $max-break-mobile-nav) {
+		background-color: $bg-color-2;
+		text-align: left;
+	}
+	@media (min-width: 800px) and (max-width: $max-break-tablet) {
+		@include g-font-small();
+	}
+	a:not(.g-btn){
+		color: $brand-4;
+		line-height: 50px;
+		padding: 0 15px;
+		display: inline-block;
+		&.g-active{
+			color: $brand-1;
+			position: relative;
+			&:after{
+			    top: 53px;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-top-color: $brand-1;
+				border-width: 10px;
+				margin-left: -10px;
+				@media (max-width: $max-break-mobile-nav) {
+					display: none;
+				}
+			}
+		}
+		&:hover{
+			color: $brand-1;
+		}
+		@media (max-width: $max-break-mobile-nav) {
+			display: block;
+			margin-right: 40px;
+		}
+	}
+	a.g-btn{
+		margin: 8px 0 8px 20px;
+		@media (max-width: $max-break-mobile-nav) {
+		    float: right;
+		    margin: 0 0 20px 0;
+		}
+	}
+	a:not(.g-active){
+		@media (max-width: $max-break-mobile-nav) {
+			display: none;
+			&.g-show{
+				display: block;
+			}
+			&.g-btn{
+				display: none;
+				&.g-show{
+					display: inline-block;
+				}
+			}
+		}
+	}
+	a.g-tab-toggle{	
+		display: none;
+		float: right;
+	    font-size: 20px;
+		@media (max-width: $max-break-mobile-nav) {
+			display: block;
+			margin: 0;
+		}
+	}
+}
+
+//fixed tab menu on scoll
+.g-tabs-container.g-fixed{
+	min-height: 55px;
+	.g-tabs{
+		min-height: 55px;
+		position: fixed;
+
+		top: 50px;
+		background: #FFF;
+		width: 100%;
+		z-index: 900;
+		box-shadow: 0px 2px 5px rgba(167, 167, 167, 0.4);
+		border-top: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+	}
+}
+
+//---------------------- Basic Tabs -------------------------
+
+.g-tab-content{
+	display: none;
+	&.g-active{
+		display: block;
+	}
+}
+
+a.g-tab-cta{
+	display: none;
+	&.g-active{
+		display: inline-block;
+	}
+}
+
+.g-basic-tabs{
+	width: 100%;
+	overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 2em;
+    border-bottom: 1px solid $border-color;
+	.g-basic-tabs-inner{
+		width: auto;
+   		white-space:nowrap;
+	}
+	a{
+		display: inline-block;
+		float: left;
+		padding-bottom: 5px;
+		border-bottom: 3px solid transparent;
+		&.g-tab-cta{
+			display: none;
+			&.g-active{
+				display: inline-block;
+			}
+		}
+	}
+	a.g-pull-right{
+		float: right;
+	}
+	a:not(.g-link-2){
+		@extend .g-font-small;
+		color: #003F7B;
+		text-transform: uppercase;
+		margin-right: 2.5em;
+		&.g-active{
+			color: $brand-1;
+			border-bottom: 3px solid $brand-1;
+		}
+		&:hover{
+			color: $brand-1;
+		}
+	}
+	@media (max-width: $max-break-mobile-nav) {
+		a.g-pull-right, a{
+			float: none;
+			padding-bottom: 15px;
+		}
+		a.g-pull-right{
+			margin-left: 10px;
+		}
+	}
+	&.g-scroll{
+		a.g-pull-right, a{
+			float: none;
+			padding-bottom: 15px;
+		}
+		a.g-pull-right{
+			margin-left: 10px;
+		}
+
+	}
+}

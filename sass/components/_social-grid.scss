@@ -1,0 +1,234 @@
+/* ==========================================================================
+   Social Grid - on homepage
+   ========================================================================== */
+
+.g-social-grid.row{
+	margin-left: 0;
+	margin-right: 0;
+	//general styling
+	.f-unit{
+		position: relative;
+		overflow: hidden;
+		display: block;
+		float: left;
+	    border: 4px solid #fff;
+	    .f-inner{
+	    	position: relative;
+	    	width: 100%;
+	    	height: 100%;
+	    	overflow: hidden;
+	    	display: block;
+	    }
+		.g-content{
+			padding: 1.5em 1.5em 3em 1.5em;
+		}
+		.g-footer{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			padding: 1.5em 1.5em 1em;
+			text-align: right;
+		}
+	}
+	//event section
+	.g-events {
+		height: 500px;
+		width: 33.3333333333333%;
+		.f-inner{
+			border: 1px solid $border-color2;			
+		}	    
+		@media (max-width: $max-break-tablet) {
+			width: 100%;
+			height: auto;
+		}
+	}
+	//news section
+	.g-news {
+		height: 250px;
+		width: 33.3333333333333%;
+		.f-inner{
+			.g-title{
+				@extend .g-font-largest;
+				color: #fff;
+				text-shadow: 1px 1px 5px #000;
+				opacity: .90;
+				font-weight: 700;
+				&:hover{
+					opacity: 1;
+				}
+			}
+			.g-label{
+				color: #fff;
+				text-transform: uppercase;
+				@extend .g-font-large;
+			    margin-bottom: 5px;
+			}
+			a.g-link-2{
+				opacity: .90;
+				color: #fff;
+				&:hover{
+					opacity: 1;
+				}
+			}
+			.g-content{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgba(0,0,0,.3);
+			}
+		}
+		@media (max-width: $max-break-tablet) {
+			width: 50%;
+			height: 500px;
+		}
+		@media (max-width: $max-break-mobile) {
+			width: 100%;
+			height: 250px;;
+		}
+	}
+	//facebook section
+	.g-facebook {
+		height: 250px;
+		width: 33.3333333333333%;
+		.f-inner{
+			background: $brand-3;
+			color: #fff;
+			p{
+				@extend .g-font-small;
+			}
+			&:hover{
+				background: darken($brand-3, 5%);
+			}
+		}
+		@media (max-width: $max-break-tablet) {
+			width: 50%;
+		}
+		@media (max-width: $max-break-mobile) {
+			width: 100%;
+			height: auto;
+		}
+	}
+	//twitter section
+	.g-twitter {
+		width: 27%;
+		height: 250px;
+		background: $brand-1;
+		color: #fff;
+		p{
+			@extend .g-font-small;
+		}
+		a{
+			text-decoration: underline;
+			color: #fff;
+			&:hover{
+				opacity: .8;
+			}
+		}
+		@media (max-width: $max-break-tablet) {
+			width: 50%;
+		}
+		@media (max-width: $max-break-mobile) {
+			width: 100%;
+			height: auto;
+		}
+	}
+	//second news section
+	.g-news-2 {
+		width: 39.6666666667%;
+		height: 250px;
+		@media (max-width: $max-break-tablet) {
+			width: 100%;
+		}
+		@media (max-width: $max-break-mobile) {
+			height: 250px;;
+		}
+	}
+	//instagram section
+	.g-instagram {
+		height: 200px;
+		width: 66.66666666666666666%;
+		#instafeed{
+			position: relative;
+			height: 100%;
+			float: left;
+		}
+		.f-inner{
+			a{
+				width: 25%;
+				height: 100%;
+				float: left;
+				position: relative;
+				@extend .transition;
+				&:after{
+					content: "\f350";
+				    display: inline-block;
+    				font-family: "Ionicons";
+				    speak: none;
+				    font-style: normal;
+				    font-weight: normal;
+				    font-variant: normal;
+				    text-transform: none;
+				    text-rendering: auto;
+				    line-height: 1;
+				    -webkit-font-smoothing: antialiased;
+					@extend .transition;
+					opacity: 0;
+					position: absolute;
+					bottom: 10px;
+					right: 10px;
+					color: #fff;
+					text-shadow: 1px 1px 8px #000;
+					font-size: 2em;
+					line-height: 1em;
+				}
+				img{
+					display: block;
+					height: 100%;
+					width: auto;
+					max-width: none;
+    				width: auto;
+    				@media (max-width: $max-break-tablet) {
+						max-width: 100%;
+						width: 100%;
+						height: auto;
+					}
+				}
+				&:hover{
+				    opacity: .8;
+				    &:after{
+						opacity: 1;
+				    }
+				}
+			}
+		}
+		@media (max-width: $max-break-tablet) {
+			width: 100%;
+			height: auto;
+		}
+	}
+	//video section
+	.g-video {
+		height: 200px;
+		background: #000;
+		width: 33.3333333333333%;
+		background-color: #000;
+		background-size: cover;
+		background-position: center center;
+		opacity: .8;
+		@extend .transition;
+		&:hover{
+			opacity: 1;
+		}
+		.f-inner{			
+			background-size: 70px auto;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		@media (max-width: $max-break-tablet) {
+			width: 100%;
+		}
+	}
+}

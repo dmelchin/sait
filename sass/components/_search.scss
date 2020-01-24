@@ -1,0 +1,447 @@
+/* =====================================================
+   Search Promotions using Algolia - launched TYOOL 2019
+   =================================================== */
+
+   @mixin smallscreen{
+    @media (max-width: 375px){
+      @content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @mixin minitab{
+    @media (max-width: 660px){
+      @content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }  
+
+@mixin tab{
+    @media (max-width: 900px){
+      @content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @mixin larger{
+    @media (min-width: 901px){
+      @content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @mixin xlarger{
+    @media (min-width: 1040px){
+      @content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+   @keyframes structured-result-border-color-change {
+    0% {
+        border: 1px solid #5d90f1;
+    }
+
+    25% {
+        border: 1px solid #a354ab;
+    }
+
+    50% {
+        border: 1px solid #6D2077;
+    }
+
+    75% {
+        border: 1px solid #005EB8;
+    }
+
+    100% {
+        border: 1px solid #00A3E0;
+    }
+}
+
+.strct-left {
+    width: 120px;
+    max-width: 120px;
+    display: inline;
+    float: left;
+    min-height: 130px;
+}
+
+.strct-right {
+    /*float: right;*/
+    width: 671px;
+    display: inline;
+}
+
+.strct-right h4, .strct-centre h4 {
+    padding: 15px 0px 0px 0px;
+    margin: 11px 0 3px 0;
+    font-size: 25px;
+    color: #0068a9;
+    text-align: left;
+    width: 615px;
+}
+
+.strct-right p, .strct-centre p {
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    color: #324053;
+    text-align: left;
+    /*width: 615px;*/
+}
+
+.strct-right a, .strct-centre a {
+    padding-right: 20px;
+    margin-right: 20px;
+    color: #981b2b;
+    text-decoration: none;
+    font-weight: normal;
+    background: url("/assets/images/algolia/structured-results/svg-angle-right.png") no-repeat right;
+    background-size: 7px;
+}
+
+.strct-right a:hover {
+    color: #cc0000;
+    background-size: 8px;
+}
+
+.strct-right div {
+    padding: 5px 0;
+}
+
+/* Multirowed Pictoral SD */
+
+#structured-result-multi-pic{
+
+    background: no-repeat right/cover, linear-gradient( -180deg, #ffffff 81%, #f8f8f9 100% );
+    border: 1px solid #00a2d7;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: ease;
+    transition-property: all;
+    transition: all 0.5s ease-out 0s;
+    animation: structured-result-border-color-change 5s;
+    animation-iteration-count: infinite;
+    display: flex;
+    align-items: center;
+    width:100%;
+    .logosob{ /* School of Business */
+        background: url("https://www.sait.ca/assets/prebuilt/img/sd/school-of-business-logo.png") no-repeat left 10%;
+        background-size: 70%, cover;
+        background-position: 10px, 15px;
+        height: 130px;
+        width: 145px;
+        align-self: flex-start;
+        flex-basis: 19%;
+        min-width: 19%;
+        @include tab{
+            flex-basis: 25%;
+        }
+        @include minitab{
+            flex-basis: 25%;
+        }
+    }
+    .strct-centre{
+        flex-basis: 57%;
+        min-width: 57%;
+        min-height: 265px;
+        align-self: flex-start;
+        padding-top: 5px;
+        @include tab{
+            flex-basis: 75%;
+        }
+        @include minitab{
+            flex-basis: 75%;
+        }
+        a{
+            line-height: 1.75em;
+        }
+        div{
+            padding: 5px 0;
+            align-self: flex-end;
+        }
+        ul{
+            list-style-type: disc;
+            padding: 0 0 0 1.5em;
+            color: #0068a9;
+            li{
+                display: list-item;
+                color: #0068a9;
+                a{
+                    background: none;
+                    color: #0068a9;
+                }
+            }
+        }
+    }
+    .strct-hero{
+        /* School of Business */
+        background: url("https://www.sait.ca/assets/prebuilt/img/sd/sd-sob-professional-leader.png") no-repeat;
+        background-size: 100%, cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: 239px;
+        flex-basis: 26%;
+        width: 26%;
+        align-self: flex-end;
+        display: initial;
+
+        @include larger{display: initial}
+        @include tab{display: none}
+        @include minitab{display: none}
+
+    }
+}
+
+/* CAREERS AT SAIT */
+
+#structured-result-career {
+    margin: 60px 0px 50px 0px;
+    padding-bottom: 7px;
+    line-height: 35px;
+    background: no-repeat right/cover, linear-gradient( -180deg, #ffffff 81%, #f8f8f9 100% );
+    border: 1px solid #00a2d7;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: ease;
+    transition-property: all;
+    transition: all 0.5s ease-out 0s;
+    animation: structured-result-border-color-change 5s;
+    animation-iteration-count: infinite;
+    .image{
+        background: url("/assets/images/algolia/structured-results/catalyst.png") no-repeat left 10%;
+        background-size: 70%, cover;
+        background-position: 10px, 15px;
+    }
+
+    .strct-right {
+        width: 671px;
+        display: inline;
+    }
+    .nurselist{
+        display: inline;
+        width: 38%;
+        float: left;
+    }
+
+    .nursebutton{
+        display: inline-block;
+        width: auto;
+    }
+    .nursehide{
+        margin-left: 125px;
+        padding-top: 1em;
+    }
+}
+
+
+#structured-result-career .strct-left {
+    height: 130px;
+}
+
+#structured-result-career .strct-right p {
+    padding-right: 15px;
+}
+
+.alberta-top-2018 {
+    background: url("/assets/images/algolia/structured-results/alberta-top-2018.png") no-repeat left;
+    background-size: 60px;
+    margin-left: 115px;
+    background-position: -15px;
+}
+
+.alberta-top-2018 a:first-child {
+    padding-left: 33px;
+}
+
+/* OPEN HOUSE & CONVOCATION */
+
+#structured-result-convocation, #structured-result-openhouse {
+    margin: 60px 0px 50px 0px;
+    line-height: 35px;
+    background: url("/assets/images/algolia/structured-results/catalyst-faded.png") no-repeat right/cover, linear-gradient( -180deg, #ffffff 81%, #f8f8f9 100% );
+    background-size: 27%, cover;
+    border: 2px solid #00a2d7;
+    /*width: 792px;*/
+    min-height: 130px;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: ease;
+    transition-property: all;
+    transition: all 0.5s ease-out 0s;
+    animation: structured-result-border-color-change 5s;
+    animation-iteration-count: infinite;
+}
+
+#structured-result-convocation:after, #structured-result-openhouse:after {
+    clear: both;
+    display: block;
+    content: “”;
+}
+
+#structured-result-convocation:hover, #structured-result-openhouse:hover {
+    border: 2px solid #0068A9;
+    background-size: 29%, cover;
+}
+
+/* you're green for a test. Can we can you? */
+
+.svg-grad {
+    background: green !important;
+}
+
+.convocate {
+    background: url("/assets/images/algolia/structured-results/gradcap.png") no-repeat 40% 40%;
+    background-size: 90px 60px;
+}
+
+.chat-with-us {
+    background: #0068a9;
+    -webkit-mask: url("/assets/images/algolia/structured-results/svg-chatbox.svg") no-repeat 50% 50%;
+    mask: url("/assets/images/algolia/structured-results/svg-chatbox.svg") no-repeat 50% 50%;
+}
+
+
+
+@media (min-width: 801px) and (max-width: 971px) {
+    #structured-result-convocation, #structured-result-openhouse {
+        height: 150px;
+    }
+
+    #structured-result-convocation .strct-right div, #structured-result-openhouse .strct-right div{
+        padding-left: 25px;
+    }
+
+    .alberta-top-2018 {
+        background-position: 5px 10px;
+        margin-left: 115px;
+    }
+
+    .alberta-top-2018 a {
+        display: inline-block;
+    }
+
+    .alberta-top-2018 a:first-child {
+        padding-left: 54px;
+    }
+
+    .alberta-top-2018 a:nth-child(3) {
+        padding-left: 55px;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .strct-left {
+        width: 20px;
+        background: none !important;
+    }
+
+    #structured-result-career .image {
+        height: 180px;
+    }
+
+    .alberta-top-2018
+    {
+        background-position: 5px 10px;
+        margin-left: 0px;
+    }
+
+    .alberta-top-2018 a:first-child {
+        padding-left: 0px;
+    }
+
+    .alberta-top-2018:nth-child(3)
+    {
+        padding-left: 35px;
+    }
+
+    #structured-result-convocation, #structured-result-openhouse {
+        width: 100%;
+        height: auto;
+    }
+
+    #structured-result-career {
+        width: 100%;
+        height: auto;
+    }
+
+    #structured-result-career {
+        .alberta-top-2018{
+            background: none;
+            padding-left: 0;
+            a{
+                margin-right: 20px;
+            }
+        }
+        .image{
+            display: none;
+        }
+        .nursebutton{
+            display: none;
+        }
+    
+        .nurselist{
+            display: block;
+            width: 100%;
+            float: none;
+            position: relative;
+            padding: 0 !important;
+        }
+        .strct-right {
+            width: 100%;
+            padding-left: 20px;
+            display: block;
+        }
+    }
+    .nursehide a{
+        display: none;
+    }
+
+    .strct-right h4, .strct-centre h4 {
+        font-size: 22px;
+        color: #0068a9;
+        text-align: left;
+        width: auto;
+    }
+
+
+
+    .strct-right p {
+        width: 90%;
+    }
+
+    .strct-right a, .strct-centre a {
+        padding-right: 15px;
+        margin-right: 0px;
+        color: #981b2b;
+        text-decoration: none;
+        background: url("/assets/images/algolia/structured-results/svg-angle-right.png") no-repeat right;
+        font-size: 1em;
+        white-space: nowrap;
+        display: inline-block;
+    }
+    
+    .strct-right div {
+        padding: 9px 0;
+    }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+    .strct-right a {
+        white-space: normal;
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 362px)
+{
+    #structured-result-career .image {
+        height: 250px;
+    }
+}

@@ -1,0 +1,193 @@
+/* ==========================================================================
+   Accordion
+   ========================================================================== */
+
+.g-accord {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 1.2em;
+
+    .g-accord-header {
+        position: relative;
+        display: block;
+        background-color: $bg-color-2;
+        @extend .g-font-large;
+        font-weight: 600;
+        padding: $table-padding;
+        color: $grey-2;
+
+        span.g-label {
+            display: block;
+            width: 100%;
+            padding-right: 50px;
+        }
+
+        span.g-icon {
+            position: absolute;
+            right: 13px;
+            top: 50%;
+            margin-top: -14px;
+        }
+
+        &:hover {
+            color: $brand-2;
+
+            span.ion-plus-round {
+                @include mui-animation(spin(in, halfturn)); //0.5turn
+                animation-duration: 1000ms;
+            }
+        }
+    }
+
+    .g-accord-body {
+        display: none;
+        border-top: 1px solid $grey-2;
+
+        table {
+            margin: 0;
+        }
+
+        &.g-open {
+            display: block;
+        }
+    }
+
+    .g-accord-body-content {
+        padding: $table-padding;
+    }
+}
+
+.g-ct-gridcontainer {
+    margin: 40px 0px 40px 0px;
+    padding-bottom: 20px;
+}
+
+.g-ct-grid {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 24% 70%;
+
+    .g-ct-pic {
+        display: inline-block;
+
+        img {
+            width: 150px;
+        }
+    }
+
+    .g-ct-metrics {
+        display: inline-block;
+
+        .bio-name {
+            color: #DA291C;
+            padding: 0px;
+            margin: 0px
+        }
+
+        .bio-title {
+            margin: 0.5em 0 0.5em;
+        }
+
+        .g-icon {
+            color: #b6b8bd;
+        }
+
+        .ct-bio-minus {
+            margin-top: 10px;
+        }
+
+        .g-ct-desc {
+            position: relative;
+        }
+
+        .bio-text {
+            overflow: hidden;
+            line-height: 1.55em; /*1.55em;*/
+            max-height: 4.65em; /*6.2em;*/
+            text-align: justify;
+            padding-right: 0.6em;
+            margin-bottom: 10px;
+        }
+
+        .bio-text:before {
+            content: '...';
+            position: absolute;
+            right: 0;
+            bottom: 0px;
+        }
+
+        .bio-text:after {
+            position: absolute;
+            content: '';
+            width: 1em;
+            height: 1em;
+        }
+
+        .bio-expanded-text {
+            max-width: 100%;
+            overflow: visible;
+            padding-right: 0.6em;
+            /*display: inline;*/
+        }
+    }
+
+    @media (max-width: $max-break-mobile) {
+        grid-template-columns: 100%;
+        grid-gap: 15px;
+
+        .g-ct-pic {
+            text-align: center;
+        }
+
+        .g-ct-metrics {
+            .bio-name, .bio-title {
+                text-align: center;
+            }
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            .g-ct-pic, .g-ct-metrics {
+                width: 100% !important;
+            }
+        }
+    }
+}
+@media (max-width: $max-break-mobile-nav) and (min-width:$min-break-mobile) {
+    .g-ct-grid {
+        grid-gap: 20px;
+        grid-template-columns: 30% 65%;
+
+        .g-ct-pic {
+            margin: 0 auto;
+        }
+    }
+}
+@media(max-width: 765px) and (min-width:$min-break-mobile) {
+    .g-ct-grid {
+        grid-template-columns: 20% 75%;
+    }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .g-ct-gridcontainer {
+        display: table;
+        width: 100%;
+
+        .g-ct-grid {
+            display: table-cell;
+            width: 50%;
+        }
+
+        .g-ct-pic {
+            float: left;
+            width: 20%;
+            display: inline-block;
+            padding-right: 2em;
+        }
+
+        .g-ct-metrics {
+            display: inline-block;
+            width: 80%;
+            float: left;
+        }
+    }
+}

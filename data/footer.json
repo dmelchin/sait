@@ -1,0 +1,23 @@
+[
+	{
+		"LayoutTemplate": "CourseDetailPage",
+		"Title": "Open House | Feb. 9",
+		"TitleVisible": "true",
+		"BgStyleId": "-cedin-nov",
+		"MobileDivClass": "ifmobileiwillbehere",
+		"DivWrapperClass": "g-container",
+		"Description": "Explore our programs ask questions and apply for free.",
+		"DescriptionClass": "",
+		"BtnText": "Register now",
+		"BtnClass": "g-btn-2 ctastrict",
+		"BtnLink": "https://www.sait.ca/future-students/visit-campus/information-sessions",
+		"BtnVisible": "true",
+		"EventCategory": "Internal-Campaign",
+		"EventAction": "Click-mobile-footer",
+		"EventLabel": "Open-House-Feb-2019",
+		"StartDate": "2019/04/24 00:00",
+		"EndDate": "2019/05/01 00:00"
+	}
+]
+  
+

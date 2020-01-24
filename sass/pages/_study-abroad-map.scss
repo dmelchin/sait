@@ -1,0 +1,117 @@
+﻿/* ==========================================================================
+   Study Abroad Map
+   ========================================================================== */
+
+#search-bar
+{
+    height: 80px;
+    background-image:url("http://www.sait.ca/assets/prebuilt/img/darker-blue-banner.jpg");
+    margin-bottom: 40px;
+}
+
+#search-bar .breadcrumb
+{
+    padding-top: 40px;
+    color: white;
+}
+
+#search-bar .breadcrumb a
+{
+    color: white;
+    font-weight: normal;
+}
+
+#search-bar select
+{
+    padding: 5px 15px;
+    border: 1px solid #d9dadc;
+    border-radius: 8px;
+    color: #565a61;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    height: 35px;
+    float: right;
+    margin-top: -35px;
+    
+}
+
+@media (max-width: $max-break-mobile) {
+    #search-bar
+    {
+        padding-top:20px;
+    }
+
+    #search-bar .g-container .breadcrumb
+    {
+        margin-top: -55px;
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    #search-bar select
+    {
+        margin: auto;
+        display: block;
+        float:none;
+    }
+}
+
+#map 
+{ 
+    height: 700px;
+    margin-top: -40px;
+}
+
+#input-location
+{
+    position: relative;
+    height:50px;
+    width: 500px; 
+    font-size:30px; 
+    margin-left:60px;
+    margin-top:30px;
+    z-index: 500;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+
+}
+
+#input-location:focus
+{
+    border-style: solid;
+    border-color: #0063A7;
+}
+
+.leaflet-popup-content {
+    width: 300px;
+    height: 540px;
+    padding-top:10px;
+}
+
+.leaflet-popup-content .photoset-grid-lightbox
+{
+    padding-top:10px;
+}
+
+.leaflet-popup-content ul {
+    
+    margin-left: -30px;
+    padding-top:15px;
+    overflow: hidden;
+    list-style: none;
+   
+}
+
+.leaflet-popup-content li {
+    float: left;
+    margin-left: 15px;
+}
+
+.ui-tabs-active {
+    
+    border-bottom: 1px solid red;
+    padding-bottom: 2px;
+}
+
+.start-journey {
+    margin: auto;
+    width: 50%;
+}

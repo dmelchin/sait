@@ -1,0 +1,324 @@
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+
+.g-card{
+	border: 1px solid $border-color;
+	background-color: $card-bg-color;
+	border-radius: $border-radius;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	display: block;
+	background-color: #fff !important;
+	position: relative;
+	&.g-card-shadow{
+		@extend .box-shadow2;
+		border: none;
+	}
+	&.g-card-secondary{
+		background-color: $bg-color-2;
+	}
+	&.g-related{
+		min-height: 130px;
+		.g-card-image{
+			background-size: cover;
+			background-position: center center;
+			width: 100px;
+			height: 130px;
+			position: absolute;
+		}
+		.g-card-content{
+			padding: 15px 15px 15px 115px;
+			.g-h4{
+				margin-bottom: 0;
+			}
+		}
+		&.g-lg{
+			min-height: 240px;
+			.g-card-image{
+				height: 240px;
+				width: 170px;
+			}
+			.g-card-content{
+				padding: 20px 20px 20px 190px;
+			}
+			@media (max-width: $max-break-mobile) {
+				min-height: 0;
+				.g-card-image{
+					display: none;
+				}
+				.g-card-content{
+					padding: 20px;
+				}
+			}
+		}
+	}
+	&.g-card-cta{
+		padding: 10px 15px;
+		display: block;
+		margin-bottom: .8em;
+		span.g-text{
+			width: 100%;
+			padding-right: 50px;
+			color: $grey-2;
+			display: block;
+			@extend .g-font-large;
+			.g-small{
+				color: $grey-4;
+				@extend .g-font-small;
+				font-weight: 300;
+				display: block;
+				margin-top: 5px;
+			}
+		}
+		span.g-icon{
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			margin-top: -12px;
+			@extend .transition;
+		}
+	}
+	&.g-card-icons{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	&.g-card-info{
+	    word-wrap: break-word;
+		.g-heading{
+			@extend .g-font-larger;
+			color: $grey-2;
+			font-weight: 600;
+		}
+		.g-card-img-header{
+			display: block;
+			background-size: cover;
+			background-position: center center;
+			height: 150px;
+		}
+		.g-card-content, .g-card-content-sm{
+			min-height: 210px;
+			@media (min-width: 1100px) and (max-width: 1200px) {
+				min-height: 235px;
+			}
+			@media (max-width: $max-break-mobile) {
+				min-height: 0;
+			}
+			&.g-card-content-full{
+				min-height: 360px;
+				@media (min-width: 1100px) and (max-width: 1200px) {
+					min-height: 385px;
+				}
+				@media (max-width: $max-break-mobile) {
+					min-height: 0;
+				}
+			}
+		}
+		&.g-card-secondary{
+			border-radius: 0;
+			p{
+				@extend .g-font-small;
+				@extend .g-color-dark;
+				@extend .g-font-bold;
+			}
+		}
+		&.g-facebook{
+			background-color: $brand-3;
+			p, div, *{
+				color: #fff;
+			}
+			a:hover{
+				text-decoration: underline;
+			}
+		}
+		&.g-twitter{
+			.g-card-content-full{
+				background-color: $brand-1;
+				p, div, *{
+					color: #fff;
+				}
+				a:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+		&.g-instagram, &.g-youtube{
+			img{
+				margin-top: 20px;
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	&.g-news{
+		background: none;
+		border-radius: 0;
+		border: none;
+		.g-card-img-header{
+			display: block;
+			background-size: cover;
+            /*
+			background-position: center center;
+            */
+			height: 190px;
+		}
+		.g-card-content{
+			min-height: 95px;
+			padding: 10px 0 15px;
+			.g-heading{
+				@extend .g-font-large;
+				color: $grey-2;
+				font-weight: 600;
+				&:hover{
+					color: $brand-2;
+				}
+			}
+			p{
+				@extend .g-font-small;
+			}
+			@media (max-width: $max-break-mobile) {
+				min-height: 0;
+			}
+		}
+		&.g-news-lg{
+			@media (max-width: $max-break-tablet) {
+			    max-width: 500px;
+    			margin: 0px auto;
+			}
+			.g-card-img-header{
+				height: 155px;
+			}
+			.g-card-content{
+				min-height: 160px;
+				padding: 10px 0 15px;
+				@media (min-width: 1100px) and (max-width: 1200px) {
+					min-height: 200px;
+				}
+				@media (max-width: $max-break-mobile) {
+					min-height: 0;
+				}
+			}
+		}
+		@media (min-width: $min-break-tablet) {
+			&.g-news-xlg{
+				.g-card-img-header{
+					height: 360px;
+				}
+				.g-card-content{
+					min-height: 170px;
+					padding: 20px;
+					background: $brand-3;
+					color: #fff;
+					text-align: center;
+				    margin: -25px 25px 0;
+					a.g-heading{
+						color: #fff;
+					    font-size: 1.5em;
+						line-height: 1.3em;
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+					p{
+					    font-size: 1.15em;
+	    				line-height: 1.3em;
+					}
+				}
+			}
+		}
+	}
+	table{
+		margin: 0;
+	}
+}
+
+#saitInstagram2{
+	a:first-child{
+		display: none;
+	}
+}
+
+a.g-card-cta{
+	&:hover{
+		@extend .box-shadow3;
+		span.g-text, span.g-icon{
+			color: $brand-2;
+		}
+		span.g-icon{
+			right: 15px;
+		}
+	}
+}
+
+a.g-related:hover{
+	@extend .box-shadow2;
+}
+
+.g-card-content{
+	padding: $card-padding;
+}
+
+@media (max-width: $max-break-mobile) {
+    .g-card-related-programs-content
+    {
+        margin-top:35px;
+    }
+}
+.g-card-content-sm{
+	padding: 16px;
+}
+
+.card-aoi 
+{
+    padding:25px;
+    min-height:200px !important;
+}
+
+//note - background-position: center center; should be added back to .g-card-img-header and anywhere else there is background-size: cover; to center the card images. 
+.g-card-img-header{
+	background-position: center center; 
+}
+
+a.g-card-img-header{
+	&:hover, &:focus{
+		opacity: .6;
+	}
+}
+
+@media (min-width: $min-break-mobile) and (max-width: $max-break-tablet){
+	.g-card.g-news.g-news-primary{
+		.g-card-img-header{
+			height: 300px;
+			background-position: center center; 
+		}
+	}
+}
+
+.g-quote-card{
+	margin: 2em 0;
+	background-image: url('../../img/card-wave.png');
+	background-size: contain;
+	background-position: left;
+	background-repeat: no-repeat;
+	blockquote{
+        padding: 1.5em 3em 1.5em 6em;
+    	margin: 0;
+	    @media (max-width: $max-break-mobile) {
+	    	padding: 1em;
+	    }
+	    p{
+	    	margin-top: 0;
+	        color: $text-color-secondary;
+	        font-size: 1.3em;
+	        line-height: $heading-line-height;
+	        font-style: italic;
+	    }
+        .g-cite{
+            margin-top: 1em;
+            color: $brand-2;
+            font-weight: 600;
+        }
+	}
+}

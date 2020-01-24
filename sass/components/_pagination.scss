@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.g-pagination{
+	margin: 1.5em 0;
+    margin-top: 3.5em;
+    margin-bottom: 0px;
+	text-align: center;
+	a{
+	    font-size: 17px;
+		display: inline-block;
+		min-width: 1.5em;
+		margin: 0 0.2em;
+		padding: 8px;
+		text-align: center;
+		&.g-active{
+			pointer-events: none;
+			color: $brand-1;
+		}
+		&:first-child{
+			margin-left: 0;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}

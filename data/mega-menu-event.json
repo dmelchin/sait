@@ -1,0 +1,40 @@
+[
+  {
+    "MenuComponent": [ "admissions", "aboutsait" ],
+    "ImgFile": "https://www.sait.ca/assets/prebuilt/img/campaign-assets/2019/is/3/2019-3-infoses-mm-ad.jpg",
+    "ImgAlt": "Info Sessions - March 12 - 13. Get the program details you need. Register now.",
+    "ImgClass": "",
+    "ImgWidth": "",
+    "ImgVisible": "true",
+    "BtnText": "",
+    "BtnClass": "",
+    "BtnLink": "https://www.sait.ca/future-students/visit-campus/information-sessions",
+    "BtnVisible": "true",
+    "EventCategory": "Internal-Campaign",
+    "EventAction": "Click-mm-ad",
+    "EventLabel": "Info-Sessions",
+    "StartDate": "2019/04/24 00:00",
+    "EndDate": "2019/05/01 00:00"
+  },
+  {
+    "MenuComponent": [ "alumni", "businessindustry" ],
+    "ImgFile": "https://www.sait.ca/assets/prebuilt/img/campaign-assets/2019/is/3/2019-3-infoses-mm-ad.jpg",
+    "ImgAlt": "",
+    "ImgClass": "",
+    "ImgWidth": "",
+    "ImgVisible": "true",
+    "BtnText": "",
+    "BtnClass": "",
+    "BtnLink": "https://www.sait.ca/future-students/visit-campus/information-sessions",
+    "BtnVisible": "true",
+    "EventCategory": "Internal-Campaign",
+    "EventAction": "Click-mm-ad",
+    "EventLabel": "Info-Sessions",
+    "StartDate": "2019/04/24 00:00",
+    "EndDate": "2019/05/01 00:00"
+  }
+]
+
+
+  
+

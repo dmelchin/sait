@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Modals - build from Remodal - https://github.com/VodkaBears/Remodal#remodal
+   ========================================================================== */
+
+
+
+@media only screen and (min-width: 641px){
+	.remodal.g-lg {
+	    max-width: 900px;
+	}
+}
+
+.remodal{
+	text-align: left;
+	padding: 2em;
+	iframe{
+		max-width: 100% !important;
+	}
+}
+
+.remodal-close {
+    left: auto;
+    right: 0;
+}
+
+.remodal-overlay {
+    background: rgba(0, 0, 0, 0.9);
+}

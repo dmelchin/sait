@@ -1,0 +1,236 @@
+/* ==========================================================================
+   General page layout for site
+   ========================================================================== */
+
+
+.g-container{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	@media (min-width: 1000px) {
+		width: 1000px;
+	}
+	@media (min-width: 1100px) {
+		width: 1100px;
+	}
+	@media (min-width: 1200px) {
+		width: 1200px;
+	}
+}
+
+.g-container-lg{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	@media (min-width: 1000px) {
+		width: 1000px;
+	}
+	@media (min-width: 1100px) {
+		width: 1100px;
+	}
+	@media (min-width: 1200px) {
+		width: 1200px;
+	}
+	@media (min-width: 1300px) {
+		width: 1300px;
+	}
+}
+
+.g-container-md{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	@media (min-width: $min-break-tablet) {
+		width: 940px;
+	}
+}
+
+.g-container-sm{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	@media (min-width: $min-break-mobile-nav) {
+		width: 800px;
+	}
+}
+
+.g-container-xs{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	@media (min-width: $min-break-mobile-nav) {
+		width: 700px;
+	}
+}
+
+.g-main{
+	min-height: 80%;
+	position: relative;
+	> div:first-child{ //breadcrumb
+		padding-top: 2em;
+		@media (max-width: $max-break-mobile-nav) {
+			padding-top: 1em;
+		}
+
+	}
+}
+
+.g-section{
+	padding-top: 3.3em;
+	padding-bottom: 3.4em;
+	&.g-first{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	&.g-waves{
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image: url(#{$img-path}/waves.png);
+			background-size: cover;
+			background-position: center center;
+			opacity: .7;
+		}
+	}
+	@media (max-width: $max-break-tablet) {
+		padding-top: 3em;
+		padding-bottom: 3.1em;
+	}
+	@media (max-width: $max-break-mobile) {
+		padding-top: 2.5em;
+		padding-bottom: 2.6em;
+	}
+}
+
+.g-section.g-section-secondary{
+	background-color: $bg-color-2;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+}
+
+.g-pull-down{
+	padding-bottom: 120px;
+}
+
+.g-pull-up{
+	margin-top: -90px;
+	padding-top: 0;
+}
+
+.g-sidebar-template{
+	.g-sidebar{
+		width: 28%;
+		float: right;
+		padding-bottom: 3.5em;
+		padding-top: 3em;
+		padding-right: 0;
+		@media (max-width: $max-break-mobile-nav) {
+			width: 100%;
+		}
+	}
+	.g-body-content{
+		width: 72%;
+		float: right;
+		padding-bottom: 3.5em;
+		padding-top: 2.5em;
+		padding-right: 1em;
+		padding-left: 6em;
+		h1{
+			margin-top: 0;
+		}
+		@media (max-width: $max-break-desktop) {
+			padding-right: 0;
+			padding-left: 3em;
+		}
+		@media (max-width: $max-break-mobile-nav) {
+			width: 100%;
+			padding-left: 0;
+		}
+	}
+	&:after {
+        @include clearfix();
+    } 
+}
+
+//new section for corporate engagement banner
+@keyframes wave {
+    0% {right: -25%;}
+    50% {right: 0;}
+    100% {right: -25%;}
+}
+
+@keyframes waveLeft {
+    0% {left: -25%;}
+    50% {left: 0;}
+    100% {left: -25%;}
+}
+
+
+.g-section.g-section-dark{
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	padding-bottom: 100px;
+	margin-bottom: 2rem;
+	overflow: hidden;
+	width: 100%;
+	@media (min-width: $min-break-mobile) {
+		padding-bottom: 130px;
+	}
+    > .g-container{
+    	position: relative;
+    }
+	.g-gradient{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		content: '';
+		background-image: url('../../img/gradient-overlay.png');
+		background-size: cover;
+		&.g-hub{
+			background-image: url('../../img/hub-overlay.png');
+		}
+	}
+	.g-wave{
+		animation-name: wave;
+		animation-iteration-count:infinite;
+		animation-duration: 70s;
+		animation-timing-function: linear;
+		position: absolute;
+		width: 150%;
+		height: 100%;
+		bottom: 0;
+		right: 0;
+		background-image: url('../../img/wave1.png');
+		background-size: 100%;
+    	background-repeat: no-repeat;
+    	background-position: bottom;
+    	@media (max-width: $max-break-tablet) {
+			background-size: 200%;
+    	}
+    	@media (max-width: $max-break-mobile) {
+			background-size: 250%;
+    	}
+		&.g-2{
+			animation-name: waveLeft;
+			animation-duration: 60s;
+			background-image: url('../../img/wave2.png');
+		}
+		&.g-3{
+			animation-duration: 50s;
+			background-image: url('../../img/wave3.png');
+		}
+	}
+}

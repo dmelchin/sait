@@ -1,0 +1,32 @@
+[
+  {
+    "PageIds": ["x14486", "x14677", "x14678", "x14815", "x14816", "x14824", "x14872", "x14922", "x21141", "x21265", "x24359", "x24361", "x24364", "x25972", "x26320"],
+    "Html": "<h3 class='g-secondary'>Online Systems Disruption:</h3><p>Affecting registration, mySAIT and Brightspace. Call the <a class='' href='https://www.sait.ca/student-life/student-services/office-of-the-registrar'>Office of the Registrar</a></p><p>403.284.7248 or visit us in person AA211<br><br><a class='g-bold' href='https://www.sait.ca/student-life/student-services/technical-support/online-systems-disruption/'>Find out more</a></p>",
+    "EventCategory": "Internal-Campaign",
+    "EventAction": "Click-card-banner",
+    "EventLabel": "Banner-Upgrade-2019",
+    "StartDate": "2019/06/15 00:00",
+    "EndDate": "2019/07/02 05:59"
+  },
+  {
+    "PageIds": [ "x14814", "x14821", "x14822", "x14823", "x14696", "x14680", "x15881", "x15898", "x16403", "x23994" ],
+    "Html": "<h3 class='g-secondary'>&nbsp; &nbsp;Online Systems Disruption:</h3><p>&nbsp; &nbsp; To register between June 25 and July 2,&nbsp;please call</p><p>&nbsp; &nbsp; the <a href='x14678.xml'>Office of the Registrar&nbsp;</a>at 403.284.7248</p><p>&nbsp; &nbsp; or visit us in person AA211 </p>",
+    "EventCategory": "Internal-Campaign",
+    "EventAction": "Click-card-banner",
+    "EventLabel": "Banner-Upgrade-2019",
+    "StartDate": "2019/06/05 00:00",
+    "EndDate": "2019/07/02 05:59"
+  },
+  {
+    "PageIds": ["x19938"],
+    "Html": "<h3 class='g-secondary'>&nbsp; &nbsp;Online Systems Disruption:</h3><p>&nbsp; &nbsp; <span>Affecting registration, extension purchases, and other online systems </span></p><p><span>&nbsp; &nbsp; June 25 - July 2</span></p><p><a href='x28583.xml'>&nbsp; &nbsp; Find out more</a></p>",
+    "EventCategory": "Internal-Campaign",
+    "EventAction": "Click-card-banner",
+    "EventLabel": "Banner-Upgrade-2019",
+    "StartDate": "2019/06/19 00:00",
+    "EndDate": "2019/06/24 05:59"
+  }
+
+]
+  
+

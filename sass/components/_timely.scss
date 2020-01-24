@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Timely Events Styling
+   ========================================================================== */
+   
+body .timely.timely-widget{
+
+	//Agenda view
+	.ai1ec-date-title.ai1ec-load-view{
+		background: #fff;
+	    border-radius: 0;
+	    border: 1px solid $brand-4;
+        box-shadow: none;
+	    .ai1ec-month{
+	    	border-radius: 0 0 0 0;
+	    }
+	    .ai1ec-day, .ai1ec-weekday{
+			color: $brand-4;
+	    }
+	}
+	.ai1ec-agenda-view .ai1ec-event.ai1ec-expanded, .ai1ec-agenda-view .ai1ec-event:hover{
+		border: 1px solid #fff;
+		box-shadow: none;
+	}
+	.ai1ec-agenda-view .ai1ec-event{
+	    margin-bottom: 30px;
+   		padding-top: 5px;
+	}
+	.ai1ec-agenda-widget-view .ai1ec-date, .ai1ec-agenda-view .ai1ec-date{
+		border-top: none;
+	}
+
+}
+
+//event details popup
+body #ai1ec-event-modal .ai1ec-modal-content {
+    padding: 0 15px 15px 15px;
+}
+
+.ai1ec-modal-dialog{	
+	#ai1ec-event-modal .ai1ec-category, #ai1ec-event-modal .ai1ec-tag, .single-ai1ec_event #timely-details .panel, .single-ai1ec_event #timely-description .panel, .single-ai1ec_event #timely-details .panel-heading, .single-ai1ec_event #timely-description .panel-heading, .single-ai1ec_event .timely-event-detail-value, .single-ai1ec_event .timely-button-row{
+    	border: none;
+    	box-shadow: none;
+    }
+    .single-ai1ec_event #timely-details a.ai1ec-category{
+		border: none;
+    	box-shadow: none;
+    	color: $grey-2;
+    	&:hover{
+    		pointer-events: none;
+    		color: $grey-2;
+    	}
+    }
+    .single-ai1ec_event .timely-event-detail-label{
+    	color: $grey-1;
+    }
+}
+
+
+
+//event listing
+
+.g-timely-event-list{
+	.ai1ec-agenda-widget-view{
+		max-width: none;
+	}
+	.ai1ec-agenda-widget-view .ai1ec-event > a:hover{
+		border-color: #fff;
+	}
+	.ai1ec-agenda-widget-view .ai1ec-event {
+	    margin-bottom: 40px;
+		margin-top: 0;
+		margin-left: 55px;
+	}
+	.ai1ec-date-title.ai1ec-load-view{
+		margin: 0;
+	}
+	.ai1ec-date-events{
+		margin: 0;
+	}
+	.ai1ec-agenda-widget-view .ai1ec-event > a{
+		padding: 0;
+	}
+	.ai1ec-agenda-widget-view .ai1ec-date {
+	    margin: 5px 0;
+	}
+	.ai1ec-agenda-widget-view .ai1ec-date-events {
+	    margin: 0 1em 0 0;
+	}
+	//3 column event listings
+	&.g-3col{
+		.ai1ec-agenda-widget-view .ai1ec-date {
+		    width: 33.33333%;
+		}
+		@media (max-width: $max-break-tablet) {
+			.ai1ec-agenda-widget-view .ai1ec-date {
+		    	width: 50%;
+		    	max-width: 550px;
+	    	    padding-bottom: 20px;
+		    }
+		}
+		@media (max-width: $max-break-mobile) {
+			.ai1ec-agenda-widget-view .ai1ec-date-events {
+			    margin: 0;
+			}
+			.ai1ec-agenda-widget-view .ai1ec-date {
+		    	width: 100%;
+		    	max-width: 550px;
+	    	    padding-bottom: 20px;
+		    }
+			.ai1ec-agenda-widget-view .ai1ec-event {
+			    margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+//events in mega menu
+.g-header{
+	.g-timely-event-list{
+		.ai1ec-agenda-widget-view .ai1ec-event {
+			margin-bottom: 10px;
+		}
+		.ai1ec-agenda-widget-view .ai1ec-date-events {
+		    margin: 0;
+		}
+	}
+}

@@ -1,0 +1,581 @@
+/* ==========================================================================
+   Slick Slider custom styling
+   ========================================================================== */
+
+//---------------------- general slider styling -------------------------
+
+.slick-slider{
+    overflow: hidden;
+    z-index: 1;
+    .slick-slide{
+		&:focus {
+			outline:none;
+		}
+    }
+    button[class*='slick-']{
+	    width: auto;
+    	padding: 0;
+    	cursor: pointer;
+    	position: absolute;
+    	text-align: center;
+    	width: 36px;
+    	&:after {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+			content:"\f3d3";
+			font-family: "Ionicons";
+			font-size: 25px;
+			margin: 0;
+    		display: inline-block;
+			width: 38px;
+			height: 38px;
+			line-height: 38px;
+			@extend .transition;
+			border-radius: 50%;
+		}
+    	&:focus {
+			outline:none;
+		}
+		&.slick-disabled{
+			display: none !important;
+		}
+    }
+}
+
+
+//---------------------- images gallery slider -------------------------
+
+.g-image-slider{
+	height: 480px;
+	@extend .g-container-lg;
+	@media (max-width: $max-break-tablet) {
+		height: 400px;
+	}
+	@media (max-width: $max-break-mobile) {
+		height: 290px;
+		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.g-slide{
+		transform: scale(.9);
+		transition-property: transform;
+    	transition-duration: 700ms;
+    	z-index: 1;
+		.g-slide-inner{
+		    margin: 70px -25px 0 80px;
+		    background-color: #000;
+    		@media (max-width: $max-break-tablet) {
+				margin: 60px 0 0 80px;
+			}
+			.g-img{
+    			opacity: .5;
+				height: 300px;
+				background-size: cover;
+				background-position: center center;
+				@media (max-width: $max-break-tablet) {
+					height: 280px;
+				}
+				@media (max-width: $max-break-mobile) {
+					height: 160px;
+				}
+			}
+		}
+		&.slick-current.slick-active{
+			z-index: 1;
+			transform: scale(1);
+			.g-slide-inner{
+				margin: 10px 0;
+				padding: 10px;
+			    background-color: #fff;
+			    @extend .box-shadow2;
+			   .g-img{
+			    	height: 420px;
+			    	opacity: 1;
+			    	@media (max-width: $max-break-tablet) {
+						height: 360px;
+					}
+					@media (max-width: $max-break-mobile) {
+						height: 250px;
+					}
+			    }
+			}
+			+ .g-slide{
+				.g-slide-inner{
+				    margin: 70px 80px 0 -25px;
+				    @media (max-width: $max-break-tablet) {
+						margin: 60px 80px 0 0;
+					}
+				}
+			}
+		}
+	}
+	button[class*='slick-'] {
+		right: 25px;
+		top: 190px;
+		border-style: none;
+		text-align: center;
+		background-color: transparent;
+		color: transparent;
+		@media (max-width: $max-break-tablet) {
+			top: 180px;
+		}
+		@media (max-width: $max-break-mobile) {
+			top: 120px;
+		}
+		&:after {
+			color: #fff;
+			opacity: .7;
+			border: 1px solid #fff;
+			@media (max-width: $max-break-mobile) {
+				background-color: #333;
+			}
+		}
+		&:hover:after{
+			opacity: 1;
+		}
+		&.slick-prev {
+			z-index: 10;
+		    left: 25px;
+			right: auto;
+			&:after {
+				content:"\f3d2";
+			}
+		}
+	}
+}
+
+//---------------------- cards slider - inspiring stories -------------------------
+
+.card-slider-heading{
+	padding: 50px 50px 0 50px;
+	@media (max-width: $max-break-tablet) {
+		padding: 0 0 0 25px;
+	}
+}
+
+
+//text side
+
+.card-slider-text{
+	button[class*='slick-'] {
+		left: 100px;
+		bottom: 0px;
+		border-style: none;
+		background-color: transparent;
+		color: transparent;
+		&:after {
+			color: $brand-3;
+			top: -20px;
+			opacity: .7;
+			border: 1px solid $brand-3;
+		}
+		&:hover:after{
+			opacity: 1;
+		}
+		&.slick-prev {
+			z-index: 10;
+			left: 45px;
+			&:after {
+				content:"\f3d2";
+			}
+		}
+	}
+	.g-content{
+		padding: 0 50px 50px 50px;
+		h4{
+			@extend .g-secondary;
+			margin: 2.5em 0 0;
+		}
+		.abstract{
+			color: #fff !important;
+		}
+	}
+	@media (max-width: $max-break-tablet) {
+		display: none;
+	}
+}
+
+//cards side - slick navigation
+
+.card-slider-col{
+	padding: 0 !important;
+}
+
+.card-slider-cards{
+	button[class*='slick-'] {
+		right: 0;
+		bottom: 0;
+		top: 0;
+		left: auto;
+		border-style: none;
+		width: 65px;
+		text-align: center;
+		background: linear-gradient(to left, $bg-color-2, rgba(247, 247, 248, 0));
+		color: transparent;
+		@media (min-width: 940px) and (max-width: 1100px) {
+			width: 30px;
+		}
+		@media (min-width: 800px) and (max-width: 940px) {
+			width: 200px;
+		}
+		@media (min-width: 600px) and (max-width: 800px) {
+			width: 100px;
+		}
+		@media (max-width: $max-break-mobile) {
+			width: 50px;
+		}
+		&:after {
+			opacity: 0;
+		}
+		&.slick-prev {
+			background: linear-gradient(to right, $bg-color-2, rgba(247, 247, 248, 0));
+			z-index: 10;
+			right: auto;
+			left: 0;
+		}
+	}
+	.g-slide{
+		margin: 10px 0px;
+		height: 460px;
+		border-radius: 8px;
+		background-color: #fff;
+		position: relative;	
+		transform: scale(.90);
+	    transition-property: transform;
+	    transition-duration: 1s;
+		@media (max-width: $max-break-mobile) {
+			transform: scale(.95);
+			height: 380px;
+		}
+		.g-slide-inner{
+			height: 460px;
+			position: relative;
+			padding: 30px;
+		    background-size: 100% auto;
+		    background-repeat: no-repeat;
+		    background-position: 0 -20px;
+			box-shadow: 0 0 18px rgba(0,0,0,.3);
+			border-radius: 8px;
+			@media (max-width: $max-break-mobile-nav) {
+				background-position: 0 -60px;	
+			}
+			@media (max-width: 400px) {
+				background-position: 0 -30px;	
+			}
+			.g-profile-img{
+				margin: 0 auto 10px;
+				border-radius: 50%;
+				padding: 5px;
+				background-color: #fff;
+				width: 135px;
+				height: auto;
+				z-index: 20;
+			    display: block;
+				@extend .box-shadow;
+			}
+			.g-content{
+				h4{
+					@extend .g-secondary;
+				}
+				.g-title{
+					color: $brand-2;
+					font-weight: 600;
+					font-size: 1.5em;
+					line-height: $heading-line-height;
+					margin-bottom: 3px;
+				}
+				.g-subtitle{
+					color: $grey-1;
+					font-size: 1.2em;
+    				line-height: $heading-line-height;
+    				margin-bottom: 10px;
+				}
+			}
+			@media (max-width: $max-break-mobile) {
+				height: 380px;
+				padding: 15px;
+				.g-profile-img{
+					width: 90px;
+				}
+			}
+		}
+	}
+	.slick-current.slick-active{
+		transform:none;
+	}
+}
+
+.card-slider-cards .g-slide:nth-last-child(n+1):nth-last-child(-n+1):first-child, .card-slider-cards .g-slide:nth-last-child(n+1):nth-last-child(-n+1):first-child ~ .g-slide { 
+    max-width: 400px;
+    margin: 0 auto;
+    @media (max-width: $max-break-mobile) {
+    	max-width: 300px;
+    }
+}
+
+
+//---------------------- Homepage  - interest slider -------------------------
+
+.g-interest-slider-container {
+    background: url(https://www.sait.ca/assets/prebuilt/img/homepage/bg-areas-of-interest-2019-1-2.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 1.5em 0 1em;
+    color: #fff;
+
+    @media (max-width: $max-break-mobile-nav) {
+        padding: 1.5em 0 1em;
+    }
+
+    h2, h3, h4, p, a {
+        color: #fff;
+	}
+
+    h3 {
+        @extend .g-font-large;
+    }
+
+    button[class*='slick-'] {
+        right: 30px;
+        bottom: 1em;
+        border-style: none;
+        text-align: center;
+        background-color: transparent;
+        color: transparent;
+
+        &:after {
+            color: #fff;
+            top: -20px;
+            opacity: .7;
+            border: 1px solid #fff;
+        }
+
+        &:hover:after {
+            opacity: 1;
+        }
+
+        &.slick-prev {
+            z-index: 10;
+            right: 85px;
+
+            &:after {
+                content: "\f3d2";
+            }
+        }
+    }
+
+    .g-interest-slider {
+        height: auto;
+
+        @media (max-width: $max-break-mobile-nav) {
+            height: 300px;
+        }
+    }
+
+    .g-interest-slide {
+        margin: -10px 0 40px 0;
+        padding: 0;
+        width: auto;
+        opacity: .9;
+        transform: scale(.75);
+        transition-property: transform;
+        transition-duration: 200ms;
+
+        @media (max-width: $max-break-mobile-nav) {
+            margin: 0;
+        }
+
+        .g-img {
+            background-size: cover;
+            background-position: center center;
+            background-color: #000;
+            height: 330px;
+            width: 240px;
+            border-radius: 10px;
+            position: relative;
+            float: left;
+            overflow: hidden;
+			border: 1px solid #fff !important;
+			cursor: pointer;
+			transition: all 0.2s ease;
+			&:hover{
+				-webkit-box-shadow: 0 0 30px rgba(1, 159, 210, .25);
+				-moz-box-shadow: 0 0 30px rgba(1, 159, 210, .25);
+				box-shadow: 0 0 30px rgba(1, 159, 210, .25);
+			}
+
+            .g-link {
+               display: block;
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               left: 0;
+               right: 0;
+            }
+
+            @media (max-width: $max-break-mobile-nav) {
+                height: 250px;
+                width: 180px;
+            }
+
+            .g-title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 0 15px;
+                color: rgba(255, 255, 255, 0.8);
+                @extend .g-font-largest;
+                @extend .transition;
+            }
+
+            .g-gradient {
+                position: absolute;
+                height: 250px;
+                width: 100%;
+                bottom: 0;
+                background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.90));
+            }
+        }
+
+        .g-content {
+            float: left;
+            width: 0;
+            height: 0;
+            opacity: 0;
+
+            .g-inner {
+                padding: 40px;
+            }
+
+            a:not(.g-btn-5) {
+                color: #fff;
+                opacity: .9;
+
+                &:hover {
+                    color: #fff;
+                    opacity: 1;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &.g-open {
+            transform: scale(.85);
+            opacity: 1;
+
+            .g-img {
+                box-shadow: 1px 1px 15px rgb(12, 12, 12);
+
+                .g-title {
+                    display: block;
+				}
+				.g-gradient{
+					display: block;
+					background: linear-gradient(rgba(0, 68, 133, 0),rgba(0, 68, 133, 0.90));
+				}
+            }
+
+            .g-content {
+                opacity: 1;
+                width: 450px;
+                height: auto;
+            }
+        }
+
+        &.g-empty {
+            width: 100px;
+            height: 10px;
+        }
+
+        &:hover {
+            opacity: 1;
+
+            .g-img {
+                .g-title {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+//---------------------- Small Card Slider -------------------------
+
+.g-sm-slider{
+	padding: 0;
+	button[class*='slick-'] {
+		top: 80px;
+		left: auto;
+		right: 15px;
+		border-style: none;
+		background-color: transparent;
+		color: transparent;
+		&:after {
+			color: #fff;
+			opacity: .7;
+			border: 1px solid #fff;
+		}
+		&:hover:after{
+			opacity: 1;
+		}
+		&.slick-prev {
+			z-index: 10;
+			left: 15px;
+			right: auto;
+			&:after {
+				content:"\f3d2";
+			}
+		}
+	}
+	.g-slide{
+		margin: 10px 10px 0 10px;
+		.g-img{
+			background-size: cover;
+			background-position: center center;
+			background-color: #000;
+			height: 190px;
+			width: 100%;
+			border-radius: 10px;
+			position: relative;
+			float: left;
+			overflow: hidden;
+			@media (max-width: $max-break-mobile-nav) {
+				
+			}
+			a.g-title{
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				color: rgba(255, 255, 255, 0.8);
+				span{
+					position: absolute;
+					bottom: 0;
+					padding: 10px;
+					width: 100%;
+				}
+				
+			}
+			.g-gradient{
+				position: absolute;
+				height: 250px;
+				width: 100%;
+				bottom: 0;
+				background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.90));
+			}
+		}
+		&:hover{
+			opacity: 1;
+			.g-img{
+				.g-title{
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+

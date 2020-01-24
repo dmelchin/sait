@@ -1,0 +1,1169 @@
+/* ==========================================================================
+   Page banners
+   ========================================================================== */
+
+//---------------------- General banner styling -------------------------
+
+.g-banner.g-inner { //program detail pages
+    border-bottom: 1px solid $border-color;
+    padding-top: 0;
+
+    .vertical-align {
+        min-height: 480px;
+        width: 100%;
+    }
+
+    h1 {
+        margin: 1em auto .5em;
+        max-width: 520px;
+    }
+
+    @media (max-width: $max-break-tablet) {
+        .middle, .vertical-align {
+            display: block;
+        }
+
+        .vertical-align {
+            min-height: 0;
+        }
+
+        .g-image {
+            display: none;
+        }
+    }
+}
+
+.g-cover-img {
+    @extend .box-shadow2;
+    margin: 3em 0;
+}
+
+.g-cover-img-round {
+    @extend .box-shadow2;
+    border-radius: 50%;
+    width: 360px;
+    max-width: 100%;
+    margin: 2em auto;
+}
+
+.g-details { //program pages top details
+    color: $grey-2;
+    width: 440px;
+    max-width: 100%;
+    margin: 3em auto;
+    border-top: 1px solid $border-color2;
+    border-bottom: 1px solid $border-color2;
+
+    > div {
+        display: inline-block;
+        padding: 15px;
+
+        > span {
+            font-weight: 700;
+            text-transform: uppercase;
+            @extend .g-font-small;
+        }
+
+        &:first-child {
+            border-right: 1px solid $border-color2;
+        }
+
+        &:last-child {
+            border-top: 1px solid $border-color2;
+            width: 440px;
+            max-width: 100%;
+        }
+
+        &.g-single {
+            border: none;
+        }
+
+        &.g-double {
+            border-right: none;
+        }
+
+        @media (max-width: $max-break-mobile) {
+            display: block;
+
+            &:first-child {
+                border-right: none;
+            }
+
+            + div {
+                border-top: 1px solid $border-color2;
+            }
+        }
+    }
+}
+
+//---------------------- Homepage Banner -------------------------
+
+#hp-banner {
+    height: 800px;
+    position: relative;
+    background: #000;
+
+    @media (max-width: 1700px) {
+        height: 700px;
+    }
+
+    @media (max-width: 1600px) {
+        height: 550px;
+    }
+
+    @media (max-width: 1400px) {
+        height: 500px;
+    }
+
+    @media (max-width: $max-break-mobile-nav) {
+        height: 400px;
+    }
+
+    @media (max-width: $max-break-mobile) {
+        height: 330px;
+    }
+}
+
+#hp-banner .banner {
+    position: relative;
+    display: none;
+    width:100%;
+
+    &.active {
+        display: block;
+    }
+
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    @include mui-animation(fade);
+    animation-duration: 500ms;
+
+    .g-container {
+        position: relative;
+        height: 100%;
+
+        .banner-content {
+            position: absolute;
+            /*top: 150px;*/
+            bottom: 140px;
+            /*top: -75% !important;*/
+            padding-right: 1em;
+
+            h2 {
+                color: #fff;
+                font-size: 3.3em;
+                line-height: 1.1em;
+                font-weight: 700;
+                max-width: 600px;
+                text-shadow: 1px 2px 5px #000;
+                margin: 0 0 .4em;
+
+                @media (max-width: $max-break-tablet) {
+                    font-size: 2.5em;
+                }
+
+                @media (max-width: $max-break-mobile-nav) {
+                    font-size: 2em;
+                }
+            }
+
+            .g-btn-lg {
+                box-shadow: 1px 1px 7px rgba(0,0,0,.5);
+                color: white !important;
+                margin-top: 15px;
+
+                &:hover {
+                    box-shadow: 1px 1px 10px rgba(0,0,0,.8);
+                }
+            }
+
+            @media (max-width: $max-break-tablet) {
+                bottom: 110px;
+            }
+
+            @media (max-width: $max-break-mobile-nav) {
+                top: 7em;
+            }
+        }
+    }
+
+    .g-group {
+        margin-top: 4em;
+        display: block;
+
+        *[class*="g-btn-"] {
+            text-transform: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: $max-break-mobile-nav) {
+            display: none;
+        }
+    }
+}
+
+#hp-banner .banner-gradient {
+    position: absolute;
+    height: 110px;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(transparent, #0e3c6f);
+
+    @media (max-width: $max-break-tablet) {
+        height: 110px;
+    }
+}
+
+#hp-banner .banner-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+
+    @media(max-width: $max-break-mobile-nav) {
+        bottom: 1em;
+    }
+
+    a {
+        color: rgba(255, 255, 255, 0.75);
+        text-transform: uppercase;
+        display: block;
+        float: left;
+        width: 20%;
+        padding: 20px 5px;
+        position: relative;
+
+        @media(max-width: $max-break-mobile-nav) {
+            display: none;
+        }
+
+        @extend .g-font-small;
+
+        &.active, &.g-active {
+            color: #fff;
+
+            &:after {
+                top: -0px;
+                left: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-bottom-color: #fff;
+                border-width: 7px;
+                margin-left: -7px;
+            }
+        }
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    @media (max-width: $max-break-mobile-nav) {
+        background-color: $grey-1;
+        height: 75px;
+
+        .g-container {
+            padding: 0;
+            height: 75px;
+            display: table;
+        }
+
+        a, a.active {
+            color: #fff;
+            padding: 15px 20px 20px;
+            text-transform: none;
+            border-right: 1px solid rgba(255,255,255,.1);
+            height: 75px;
+            display: table-cell;
+            vertical-align: middle;
+            float: none;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            &:after {
+            }
+
+            @media (max-width: $max-break-mobile) {
+                padding: 15px 4px 20px;
+                border-right: none;
+                font-size: .82em;
+                line-height: 1.3em;
+            }
+        }
+    }
+}
+
+#hp-banner.FutureStudents #FutureStudents {
+    display: block;
+}
+
+
+
+
+//banner nav should always have 3-5 items
+
+.banner-nav a:nth-last-child(n+5):nth-last-child(-n+5):first-child, .banner-nav a:nth-last-child(n+5):nth-last-child(-n+5):first-child ~ a {
+    width: 20%;
+}
+
+.banner-nav a:nth-last-child(n+4):nth-last-child(-n+4):first-child, .banner-nav a:nth-last-child(n+4):nth-last-child(-n+4):first-child ~ a {
+    width: 25%;
+}
+
+.banner-nav a:nth-last-child(n+3):nth-last-child(-n+3):first-child, .banner-nav a:nth-last-child(n+3):nth-last-child(-n+3):first-child ~ a {
+    width: 33.33333%;
+}
+
+//---------------------- How to Apply Banner -------------------------
+
+.g-apply-banner {
+    background-image: url(#{$img-path}/banner-apply.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    .g-breadcrumb {
+        color: #fff;
+        opacity: .8;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    .g-banner-content {
+        max-width: 500px;
+        padding-bottom: 3em;
+
+        h1, p {
+            color: #fff;
+        }
+
+        p {
+        }
+    }
+}
+
+@media (max-width: $max-break-mobile) {
+    .g-apply-banner {
+        .g-banner-content {
+            h1 {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.65);
+            }
+
+            p {
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+            }
+        }
+    }
+}
+
+//---------------------- Programs Info Session Banner -------------------------
+
+#program-upcoming-info-session-banner {
+    width: 100%;
+    height: 70px;
+    padding-top: 21px;
+    background-color: #0067A4;
+    color: #fff;
+    text-align: center;
+    display: none;
+    background-image: linear-gradient(27deg, #0067A4 0%,#0067A4 30%, #009FD2 99%);
+    font-size: 1.3em;
+    position: relative;
+
+    a {
+        font-weight: 300 !important;
+        color: #fff;
+        background-image: url(https://www.sait.ca/assets/prebuilt/img/campaign-assets/info-sessions/CTA-info-session-go.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        padding: .5em 0;
+        padding-right: 0px;
+        background-size: 30px;
+        padding-right: 39px;
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            /* IE10+ CSS styles go here */
+            background-image: none;
+        }
+
+        @include tab {
+            color: #fff;
+            background-image: url(https://www.sait.ca/assets/prebuilt/img/campaign-assets/info-sessions/is-info-sessions-mob.png), url(https://www.sait.ca/assets/prebuilt/img/campaign-assets/info-sessions/CTA-info-session-go.png);
+            background-repeat: no-repeat, no-repeat;
+            background-position: left, right;
+            background-size: 120px, 40px;
+            padding-left: 120px;
+            padding-top: .6em;
+            padding-bottom: 1em;
+            padding-right: 50px;
+            display: block;
+            width: 94%;
+            text-align: center;
+            margin-left: 3%;
+        }
+
+        @include smallscreen {
+            background-size: 110px, 30px;
+        }
+
+        .program-eventdate {
+            white-space: nowrap;
+        }
+    }
+
+    a:hover {
+        color: #ffd84f;
+        transition: all 0.5s ease-out 0s !important;
+    }
+
+    span.is-text {
+        @include tab {
+            display: none;
+        }
+    }
+
+    span.is-date {
+        font-weight: bold;
+
+        @include tab {
+            display: inline;
+            float: right;
+            position: absolute;
+            top: 9px;
+            right: 76px;
+            font-weight: normal;
+        }
+
+        @include smallscreen {
+            right: 55px;
+            top: 8px;
+        }
+    }
+
+    span.is-jump {
+        font-weight: bold;
+        color: #ffd247;
+
+        @include tab {
+            display: inline;
+            float: right;
+            padding: 0;
+            position: absolute;
+            right: 76px;
+            top: 28px;
+        }
+
+        @include smallscreen {
+            font-weight: normal;
+            right: 55px;
+            top: 25px;
+        }
+    }
+
+    @include tab {
+        position: fixed;
+        bottom: 0px;
+        z-index: 10;
+        padding-top: 4px;
+        font-size: 1.15em;
+    }
+
+    @include smallscreen {
+        height: 70px;
+    }
+}
+
+.info-banner {
+    width: 102%;
+    padding: 5px 5px 5px 0px;
+    background-color: #0063A7;
+    color: #fff;
+    text-align: center;
+    box-shadow: 1px 1px 12px rgba(0,0,0,.35);
+    margin-left: -20px;
+}
+
+.info-banner-programs-courses {
+    // padding: 5px 5px 5px 0px;
+    padding: 8px;
+    background-color: #0063A7;
+    color: #fff;
+    text-align: center;
+    box-shadow: 1px 1px 12px rgba(0,0,0,.35);
+    height: 40px;
+}
+
+.info-banner h5 {
+    margin-bottom: 0;
+}
+
+.info-banner-bottom { 
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    background: url(https://www.sait.ca/assets/prebuilt/img/campaign-assets/2019/is/3/2019-3-mm-bg-info-sessions.jpg);
+    // background: #2352A7;
+    display: table;
+    //height: 39px;
+    // background: url(https://www.sait.ca/assets/prebuilt/img/campaign-assets/2019/td/2019-1-tour-days-mm.jpg);
+    // background: #005EB8;
+    // background: rgb(50,64,83);
+    // background-image: linear-gradient(to right, #005eb8, #0070c4, #0081cf, #0092d8, #00a3e0);
+    // background-image: url(https://www.sait.ca/assets/prebuilt/img/campaign-assets/coned-info-night/2018-11-coned-info-night-mm-btmstrip.jpg);
+    // background-image: url(https://www.sait.ca/assets/prebuilt/img/campaign-assets/openhouse18/2018-oh-mm-btmstrip-background.jpg);
+    background-position: center;
+    // background-color: #7E1524;
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+    span {
+        font-weight: bold;
+    }
+    img {
+        max-height: 24px;
+        vertical-align: middle;
+        cursor: pointer;
+        padding-bottom: 1px;
+
+        .mmgo{
+            max-height: 18px;
+            padding-bottom: 0; 
+        }
+    }
+    a{
+        vertical-align: middle;
+        display: table-cell;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+            text-decoration: none !important;
+        }
+
+    }
+
+}
+
+.info-banner-bottom-dog {
+    // day of giving 2018
+    position: absolute;
+    bottom: 0px;
+    //height: 39px;
+    background: #981B2B;
+    // background-image: linear-gradient(to right, #005eb8, #0070c4, #0081cf, #0092d8, #00a3e0);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.info-banner a {
+    color: #fff !important;
+    font-weight: normal;
+}
+
+.info-banner a:visited {
+    color: #fff;
+}
+
+.info-banner-programs-courses a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.info-banner-programs-courses a:hover {
+    color: #ffd84f;
+}
+
+#info-banner-top {
+    background-color: #1C232C;
+    margin-left: 0px;
+}
+
+#info-banner-top a {
+    font-weight: normal;
+}
+
+#info-banner-middle {
+    text-align: center;
+    background-image: url(../../img/banners/homepage-winter-campaign-skinny-2018.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 25px;
+    background-position: right bottom;
+    display: none;
+}
+
+#info-banner-middle h2 {
+    color: #FFF;
+    padding-top: 0.5em;
+}
+
+#info-banner-middle p {
+    font-size: 22px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 25px;
+    color: #FFF;
+}
+
+#info-banner-middle .g-btn {
+    color: #A71B30;
+    background-color: #FFF;
+    border: none;
+    margin-bottom: 1em;
+}
+
+.info-banner-green {
+    background: #4e6e20 !important;
+    box-shadow: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media (max-width: $max-break-mobile) {
+    .info-banner {
+        width: 120%;
+        position: relative;
+    }
+
+    .info-banner a {
+        font-weight: normal;
+        color: #fff;
+    }
+
+    .info-banner-programs-courses {
+        position: relative;
+    }
+
+    .info-banner-programs-course a {
+        font-weight: normal;
+        color: #fff;
+    }
+
+    #info-banner-top {
+        width: 100%;
+        display: none;
+    }
+
+    #info-banner-middle {
+    }
+
+    #info-banner-middle p {
+        width: 80%;
+        font-size: 19px;
+    }
+
+    #info-banner-middle h2 {
+        padding-top: 10px;
+    }
+}
+
+.info-banner a:hover {
+    color: #ffd84f;
+    transition: all 0.5s ease-out 0s !important;
+}
+
+.info-banner-no-bg {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.info-banner-no-bg a {
+    color: #fff;
+}
+
+.info-banner-no-bg-blue-link a {
+    color: #005EC7;
+}
+
+//---------------------- Crisis Banner -------------------------
+
+#crisis-level-one {
+    width: 100%;
+    min-height: 50px;
+    padding: 15px 0;
+    background: #0063a7;
+    text-align: center;
+    color: #fff;
+    overflow: auto;
+    font-size: .875em;
+    font-family: Titillium Web;
+}
+
+#crisis-level-one a {
+    color: #FFF;
+}
+
+#crisis-level-one a:visited {
+    color: #FFF;
+}
+
+#crisis-level-two {
+    width: 100%;
+    height: 800px;
+    padding-top: 15px;
+    background-color: #242424;
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+}
+
+//---------------------- Color Banner -------------------------
+
+.color-banner {
+    background-image: url('/images/banner/gr-ribbon.png');
+    width: 100%;
+    height: 20px;
+}
+
+.blue-banner {
+    height: 20px;
+    width: 100%;
+    background-image: url('/images/banner/2018-4-shape-world-ribbon.png');
+}
+
+
+//---------------------- Shape Your World Banner -------------------------
+.-syw-wrapper {
+    padding: 2em;
+    background: url("https://www.sait.ca/assets/prebuilt/img/campaign-assets/syw/shape-your-world-skinny.jpg");
+    box-shadow: inset 0px -17px 22px -7px #840014;
+    -webkit-box-shadow: inset 0px -17px 22px -7px #840014;
+    -moz-box-shadow: inset 0px -17px 22px -7px #840014;
+    -o-box-shadow: inset 0px -17px 22px -7px #840014;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 25px;
+    background-position: 100% 100%;
+    background-size: 120% 120%;
+    background-position: center center;
+}
+
+section#syw {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.-syw-wrapper > h3 {
+    font-size: 2.2em;
+    color: #fff !important;
+}
+
+.-syw-wrapper > p {
+    line-height: 1.5;
+    margin: 1em 0;
+    font-size: 1.2em;
+}
+
+.-syw-wrapper > button {
+    display: flex;
+    justify-content: center;
+    background: white;
+    color: #a71b30;
+    border: none;
+    border-radius: 25px;
+    margin-top: 1em;
+    margin-bottom: 0;
+    transition: all 0.8s linear;
+    cursor: pointer;
+    width: 200px;
+    display: inline;
+    padding: 0 22px;
+    height: 35px;
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-animation: syw-fadeIn 0.4s 1.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: syw-fadeIn 0.4s 1.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+#syw > .borderland {
+    display: block;
+    width: 100%;
+    max-height: 3px;
+    background: linear-gradient(132deg, #DA291C, #A6192E);
+    background-size: 400% 400%;
+    -webkit-animation: syw-BorderChange 9s ease infinite;
+    animation: syw-BorderChange 9s ease infinite;
+}
+
+@-webkit-keyframes syw-fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opaticy: 1;
+    }
+}
+
+@keyframes syw-fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opaticy: 1;
+    }
+}
+
+@-webkit-keyframes syw-BorderChange {
+    0% {
+        background-position: 0% 7%;
+    }
+
+    50% {
+        background-position: 100% 94%;
+    }
+
+    100% {
+        background-position: 0% 7%;
+    }
+}
+
+@keyframes syw-BorderChange {
+    0% {
+        background-position: 0% 7%;
+    }
+
+    50% {
+        background-position: 100% 94%;
+    }
+
+    100% {
+        background-position: 0% 7%;
+    }
+}
+
+#privacy-banner {
+    background-image: linear-gradient(27deg,#0067a4,#0067a4 30%,#009fd2 99%);
+    color: white;
+    font-size: 18px;
+    line-height: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0px;
+    opacity: 0.90;
+    z-index: 1000;
+    font-family: Titillium Web;
+}
+
+#privacy-banner a {
+    color: white;
+    text-decoration: underline;
+}
+
+/********************School of hospitality and tourism banner*****************/
+#h-tour-banner {
+    min-height: 160px;
+    background-color: #F2F1EF;
+    width: 100%;
+
+    .g-container {
+        display: flex;
+        align-items: center;
+        min-height: 160px;
+        height: 180px;
+
+        img {
+            max-width: 120px;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+
+        span {
+            font-size: 20px;
+            color: #2E4055;
+            font-weight: 600;
+            line-height: 1.5em;
+            padding: 10px 0px 10px 0;
+        }
+
+        a {
+            font-size: 16px;
+            float: right;
+            text-transform: uppercase;
+
+            .ion-ios-arrow-forward {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: $max-break-mobile) {
+            img {
+                max-width: 100px;
+            }
+
+            span {
+                font-size: 16px;
+                line-height: 1.5em;
+            }
+
+            a {
+                float: none;
+                display: block;
+                font-size: 88%;
+            }
+        }
+    }
+
+    @media (max-width: $max-break-mobile) {
+        .g-container{height:100%;}
+    }
+}
+
+/***************** alert banner *********************/
+.alert-menu-bottom {
+    background: #005EB8 !important;
+
+    .ion-ios-information-outline {
+        color: #FF9E1B;
+        font-weight: bolder;
+    }
+    @media (min-width: $min-break-tablet) {
+        font-size: 15px;
+    }
+}
+
+.msg-mobile-only{
+    display:none;
+}
+.msg-desktop-only{
+    display:block;
+    margin-top:5px;
+}
+.banner-alert {
+    background-color: #005EB8;
+    padding: 15px 10px 15px 10px;
+    color: #ffffff;
+
+    .lnk-banner {
+        color: #fff !important;
+        text-decoration: underline !important;
+    }
+
+    .lnk-banner:hover {
+        color: #d9DADC !important;
+    }
+
+    .ion-ios-information-outline {
+        color: #FF9E1B;
+        font-size: 6em;
+        font-weight: bold;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 18px 0px 5px 0px;
+        color: #ffffff;
+    }
+
+    .g-container-md {
+        min-height: 100px;
+
+        .-oh-image-holder {
+            min-height: 110px;
+        }
+
+        .g-btn-2 {
+            background: #ffffff !important;
+            position: absolute !important;
+            top: 8px;
+            right: 30px;
+            display: inline;
+            font-size: .875em;
+            float: right;
+        }
+    }
+
+    @media(max-width:660px) {
+        .ion-ios-information-outline {
+            font-size: 5em;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 5px 0px 5px 0px;
+            color: #ffffff;
+        }
+
+        .g-container-md {
+            min-height: 125px;
+
+            .-oh-image-holder {
+                padding-right: 40px;
+                min-height: 125px;
+            }
+
+            .g-btn-2 {
+                float: none;
+                font-size: .75em;
+                transform: none;
+                margin-top: .85em;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative !important;
+                display: inline-block;
+                right: unset;
+            }
+
+            .msg-desktop-only {
+                display: none;
+            }
+
+            .msg-mobile-only {
+                display: block;
+            }
+        }
+    }
+
+    @media(max-width:415px) {
+        .ion-ios-information-outline {
+            font-size: 3em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+        }
+
+        .g-container-md {
+            width: 100% !important;
+            min-height: 110px !important;
+
+            .-oh-image-holder {
+                padding-top: 6px;
+                padding-right: 20px !important;
+                width: auto !important;
+            }
+
+            .msg-mobile-only {
+                font-size: 95%;
+            }
+        }
+    }
+}
+
+/*********************** Transfer Options ***************************/
+.blue-bar-comp {
+    background-image: linear-gradient(0deg, #549ecb 0%, #2370B1 100%);
+    min-height: 80px;
+    text-align: center;
+    /*padding-bottom: 0.5em;*/
+    .g-container-md {
+        min-height: 80px !important;
+
+        img {
+            vertical-align: middle;
+        }
+
+        .txt-container {
+            padding-top: 1.6em;
+            display: inline-block;
+        }
+    }
+
+    .-oh-open-wrapper p {
+        padding: .75em 0 !important;
+    }
+
+    .transfer-text {
+        font-size: 22px;
+        color: #FFFFFF;
+        text-align: left;
+    }
+
+    .transfer-opt-link {
+        font-size: 17px !important;
+        color: #FFFFFF !important;
+        text-align: left;
+        text-transform: uppercase;
+        transform: translateY(2px) !important;
+
+        .lnk-underline {
+            border-bottom: 2px solid rgba(255,255,255,0.5);
+        }
+    }
+
+    @media(max-width:$max-break-mobile-nav) {
+        .g-container-md {
+            img {
+                padding-bottom: 12px;
+            }
+        }
+
+        .transfer-opt-link {
+            display: block;
+            margin-top: 0px !important;
+        }
+
+        .transfer-text {
+            display: inherit;
+        }
+    }
+
+    @media(max-width:695px) {
+        padding-bottom: 2em;
+
+        .g-container-md {
+            position: relative;
+
+            img {
+                width: 40px;
+                position: absolute;
+                top: 45%;
+                left: 0;
+            }
+            .txt-container {
+                display: table-cell;
+                vertical-align:middle;
+                padding-top: 1em !important;
+                padding-left: 45px;
+            }
+        }
+
+        .transfer-text {
+            font-size: 17px;
+        }
+
+        .transfer-opt-link {
+            font-size: 14px !important;
+        }
+    }
+}
+
+/********************* Visit campus background ***************************/
+.visit-fade-bg {
+    position: absolute;
+    background: linear-gradient(0deg, rgba(255,255,255,0.1) 10%, rgba(254,254,254,1) 100%), url('https://sait.ca/assets/images/about%20SAIT/campus/buildings%20and%20facilities/heritage-hall-cropped.jpg') no-repeat;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 100%;
+    height: 400px;
+}
+
+

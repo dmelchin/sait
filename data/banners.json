@@ -1,0 +1,50 @@
+﻿{
+  "banners": [
+    {
+      "type": "image",
+      "bgImage": "url('assets/prebuilt/img/banners/openhouse-2017-banner.jpg')",      
+      "bgColor": "pink",
+      "closeBtnBgColor": "white",
+      "closeBtnFgColor": "red",
+      "header": "Join us at Open House",
+      "message": "<h3>Drop-in, ask questions and apply for free.</h3> <p class='g-color-secondary' style='color: white'>Friday, Oct. 19 &amp; Saturday, Oct. 20 | 9 am - 3 pm </p>",
+      "button": "<a href='http://www.sait.ca/future-students/visit-campus/open-house-2018' target='' class='g-btn g-btn-lg' onclick='ga(\"send\", \"event\", { eventCategory: \"Internal-Campaigns\", eventAction: \"Click\", eventLabel: \"Open-House-2018\" });'>LEARN MORE</a>",
+      "startDate": "2018/09/28 00:00",
+      "endDate": "2018/10/20 16:00"
+    },
+    {
+      "type": "video",
+      "videoSrc": "assets/prebuilt/video/sait-holiday-video-2017.mp4",
+      "bgImage": "",
+      "closeBtnBgColor": "black",
+      "closeBtnFgColor": "white",
+      "header": "Happy holidays from SAIT",
+      "message": "",
+      "startDate": "2017/12/21 09:00",
+      "endDate": "2017/12/22 12:00"
+    },
+    {
+      "type": "video",
+      "videoSrc": "assets/prebuilt/video/sait-holiday-video-2017.mp4",
+      "bgImage": "",
+      "closeBtnBgColor": "black",
+      "closeBtnFgColor": "white",
+      "header": "Happy holidays from SAIT",
+      "message": "Our employees and students are enjoying the season. </br><br/> Campus reopens Tuesday, Jan. 2, 2018.",
+      "startDate": "2017/12/22 12:00",
+      "endDate": "2018/01/01 17:00"
+    },
+    {
+      "type": "image",
+      "bgImage": "url('https://www.sait.ca/assets/prebuilt/img/campaign-assets/2019/is/3/2019-3-info-sessions-promo.jpg')",
+      "bgColor": "gray",
+      "closeBtnBgColor": "white",
+      "closeBtnFgColor": "red",
+      "header": "Continuing Education Info Night",
+      "message": "<p style='color: #FFF;'>Great Careers, Shaped at SAIT.<br />April 17 | 3 - 6 pm | The Tastemarket by SAIT.<br/></p>",
+      "button": "<a href='https://www.sait.ca/future-students/visit-campus/continuing-education-info-night' id='ctagrrrr' onclick=\"ga('send', 'event', { eventCategory: 'Internal-Campaigns', eventAction: 'Click-homepage-takeover', eventLabel: 'ConEd-InfoNight-Apr-2019'});\">REGISTER NOW</a>",
+      "startDate": "2019/04/10 00:00",
+      "endDate": "2019/04/17 20:00"
+    }
+  ]
+}

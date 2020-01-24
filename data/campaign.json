@@ -1,0 +1,23 @@
+[
+	{
+		"LayoutTemplate": "ProgramsAndCourses",
+		"Title": "Info Sessions – March 12 & 13",
+		"TitleVisible": "true",
+		"BgStyleId": "-is-nov",
+		"DivWrapperClass": "g-container",
+		"Description": "Get the program details you need.",
+		"DescriptionClass": "",
+		"BtnText": "Register now",
+		"BtnClass": "g-btn-2 ctastrict",
+		"BtnLink": "https://www.sait.ca/future-students/visit-campus/information-sessions",
+		"BtnVisible": "true",
+		"EventCategory": "Internal-Campaign",
+		"EventAction": ["Click-p-and-c-banner"],
+		"EventLabel": "ConEd",
+		"UrlsEnd": ["programs-and-courses"],
+		"StartDate": "2019/04/24 00:00",
+		"EndDate": "2019/05/01 00:00"
+	}
+]
+  
+

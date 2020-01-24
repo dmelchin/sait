@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+.g-table-tabs{
+	text-transform: uppercase;
+	border-bottom: 1px solid $border-color;
+	font-weight: bold;
+	margin-bottom: 5px;
+	a{
+		margin: 0 16px 0 13px;
+		display: inline-block;
+		color: $grey-2;
+		padding: 15px 0 8px;
+		border-bottom: 4px solid transparent;
+		&.g-active{
+			color: $brand-1;
+			border-bottom: 4px solid $brand-1;
+		}
+		&:hover{
+			color: $brand-1;
+		}
+		@media (max-width: $max-break-mobile) {
+			margin-right: 0;
+		}
+	}
+}
+
+table.g-table{
+	width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+	thead, tbody, tfoot, tr, th, td{
+	    margin: 0;
+	    padding: 0;
+	    border: none;
+	    border-collapse: inherit;
+	    border-spacing: 0;
+	    border-color: inherit;
+	    vertical-align: top;
+	    -webkit-border-horizontal-spacing: 0;
+	    -webkit-border-vertical-spacing: 0;
+	}
+	thead{
+		border-bottom: 1px solid $table-border-color;
+		text-align: left;
+	}
+	tbody{
+		font-weight: normal;
+	    font-weight: inherit;
+	}
+	&.g-table-striped{
+		thead, tbody, tfoot, tr, th, td{
+		    padding: $table-padding;
+		}
+	}
+	&.g-table-striped>tbody>tr:nth-of-type(even) {
+	    background-color: $table-striped-bg-color;
+	}
+	&.g-table-bordered{
+		td, td {
+		    border-top: 1px solid $table-border-color;
+		}
+	}
+	&.g-table-hover{
+		>tbody>tr:hover {
+			@extend .transition;
+		    background-color: $table-hover-bg-color;
+		}
+	}
+	//stacked table on < tablet
+	&.g-tablet-stacked{
+		@media (max-width: $max-break-tablet) {
+			thead{
+				tr{
+					display: none;
+				}
+			}
+			td{
+				display: block;
+				width: 100%;
+				padding: 0px;
+			}
+			tr{
+				padding: 15px;
+				display: block;
+			}
+			tr td:not(:first-child){
+				/*display: none;*/
+			    padding-left: 40px;
+			}
+			tr td:first-child{
+				margin-bottom: 5px;
+				position: relative;
+				padding-left: 40px;
+			}
+		}
+		.g-open-link{
+			font-size: 20px;
+			padding: 0 10px 10px 10px;
+			position: absolute;
+			left: -5px;
+			@media (min-width: $min-break-tablet) {
+				display: none;
+			}
+		}
+	}
+	//programs/courses table
+	&.program-table{
+		tr td{
+			min-width: 190px;
+		}
+	    tr td:nth-child(2){
+			min-width: 170px;
+		}
+		tr td:nth-child(3){
+			min-width: 180px;
+		}
+		tr td:nth-child(4){
+			min-width: 100px;
+		}
+		tr td:last-child{
+			min-width: 200px;
+		}
+		th{
+			text-align: left;
+		}
+	}
+}
+
+body.showPrograms{
+	.coursesOnly{
+		display: none;
+	}
+}
+
+body.showCourses{
+	.programsOnly{
+		display: none;
+	}
+}
+
+table.g-table{
+	@media (min-width: 940px){
+		&.g-table-striped.g-table-lg{
+			thead, tbody, tfoot, tr, th, td{
+		        padding: 15px 13px;
+			}
+		}	
+	}
+}
+
+.collapseColTbl {
+    @media(max-width:860px) {
+        tbody tr td {
+            display: block;
+            padding: 2px !important;
+        }
+    }
+}

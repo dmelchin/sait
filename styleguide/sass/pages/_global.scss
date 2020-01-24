@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Global Style Guide Page --- This file is just for this testing/style guide site - NOT part pf global CSS
+   ========================================================================== */
+
+body.testing{
+	padding: 90px 0 60px;
+	@media (max-width: $max-break-tablet) {
+		padding-top: 50px;
+	}
+	.testing-bg{
+		height: 50px;
+		border: 1px solid $border-color;
+	}
+	.testing-header{
+		background-color: $brand-5;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10;
+		.logo-sm{
+			float: left;
+			a{
+				display: block;
+			}
+			img{
+				padding: 10px 8px 6px;
+				width: auto;
+				height: 45px;
+			}
+		}
+		h1{
+			float: right;
+		    color: #fff;
+		    font-size: 1.6em;
+		    margin: 0;
+		    line-height: 50px;
+		}
+	}
+	.g-container{
+		position: relative;
+		.testing-body-container{
+			margin-left: 300px;
+			padding-bottom: 3em;
+			@media (max-width: $max-break-tablet) {
+				margin-left: 0;
+			}
+			section{
+				display: none;
+				> h2:first-child{
+					margin-top: 0;
+				}
+				&.g-active{
+					display: block;
+				}
+			}
+		}
+		.testing-sidebar{
+			position: fixed;
+			width: 260px;
+			top: 60px;
+		    padding: 24px 30px 0 0;
+			bottom: 20px;
+			overflow: scroll;
+			ul.testing-menu{
+				> li > a.g-active{
+					
+					text-decoration: underline;
+				}
+				ul{
+					display: none;
+				}
+				li a.g-active + ul{
+					display: block;
+				}
+				a.g-active{
+					color: $brand-1;
+				}
+			}
+			@media (max-width: $max-break-tablet) {
+				width: 100%;
+				position: relative;
+				top: 0;
+			    padding: 0 0 80px 0;
+			}
+		}
+	}
+	pre{
+		padding: 12px;
+		margin: 1.5em 0 4em;
+		font-size: 15px;
+		line-height: 1.5;
+	    white-space: pre;
+    	overflow-x: auto;
+		color: #333333;
+		background-color: #f5f5f5;
+		border: 1px solid #cccccc;
+		border-radius: 4px;
+		display: block;
+		font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+		xmp{
+			margin: 0;
+		}
+	}
+	.g-scroll-up{
+		display: block;
+	}
+	.testing-unit{
+		background-color: $grey-2;
+		height: 50px;
+	}
+}

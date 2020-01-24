@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Listings
+   ========================================================================== */
+
+.g-event-listing{
+	position: relative;
+	margin-bottom: 2em;
+	min-height: 50px;
+	display: block;
+	.g-date{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: 1px solid $brand-4;
+		color: $brand-4;
+		text-align: center;
+		padding: 7px;
+		@extend .transition;
+		span{
+			text-transform: uppercase;
+			display: block;
+			line-height: 1em;
+			@extend .g-font-small;
+			+ span{
+				font-size: 20px;
+			}
+		}
+	}
+	.g-info{
+		padding-left: 70px;
+		color: $grey-2;
+		font-weight: 600;
+	}
+	&:after {
+        @include clearfix();
+    }
+    &:hover{
+    	.g-date{
+			border: 1px solid $brand-4;
+			color: #fff;
+			background: $brand-4;
+		}
+		.g-info{
+			color: $grey-1;
+		}
+    }
+    &.g-sm{
+    	min-height: 40px;
+    	margin: .8em 0;
+    	.g-date{
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			padding: 5px;
+			span{
+				text-transform: uppercase;
+				display: block;
+				line-height: 1em;
+				@extend .g-font-smaller;
+				+ span{
+					font-size: 18px;
+				}
+			}
+		}
+		.g-info{
+			padding-left: 50px;
+			color: $grey-1;
+			font-weight: 400;
+			@extend .g-font-small;
+		}
+    }
+}
+
+
+//search results
+
+.g-results-container{
+	.g-result{
+		margin: 1.5em 0 2.5em;
+		.g-result-heading{
+			@extend .g-font-larger;
+			font-weight: normal;
+		}
+		.g-result-link{
+			color: $grey-3;
+			&:hover{
+				color: $grey-1;
+			}
+		}
+	}
+}

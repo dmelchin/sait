@@ -1,0 +1,22 @@
+﻿@media print{
+   
+	.headers-container
+	{
+		display: none;
+	}
+	
+	.container
+	{
+		display: block;
+	}
+	
+    .g-sidebar
+    {
+        display: none;
+    }
+
+	.g-footer
+	{
+		display: none;
+	}
+}

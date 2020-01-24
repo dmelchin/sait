@@ -1,0 +1,1575 @@
+﻿
+
+/* Place Holder CSS */
+::-webkit-input-placeholder {
+    color: #0068a9;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+
+:-moz-placeholder {
+    color: #0068a9;
+    opacity: 0.5;
+    -moz-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+
+::-moz-placeholder {
+    color: #0068a9;
+    opacity: 0.5;
+    -moz-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+
+:-ms-input-placeholder {
+    color: #0068a9;
+    opacity: 0.5;
+    -ms-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+}
+
+#search-results-listgrid {
+    margin-left: 10px;
+}
+
+#search-results-listgrid.grid {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#search-results-listgrid.list {
+    font-size: 15px;
+    border-top: 1px solid #d9DADC;
+}
+
+#search-results {
+    /*background: tan;  xxxmp*/
+    display: none;
+    margin-left: 20%;
+    padding-bottom: 100px;
+}
+.grid #search-error-no-results {
+    margin-left:auto;
+}
+
+.sticky {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    left: 0;
+    background-color: #feda00;
+}
+.result-spacing {
+    /*margin-top: 10px;*/
+    padding: 10px;
+}
+
+.banner-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-flex > div:first-child {
+    text-align:left;
+}
+.banner-flex > div:nth-child(2) {
+    text-align: center;
+    flex-grow: 1;
+}
+.banner-flex > div:last-child {
+    text-align: right;
+}
+.notetext {
+    background-color: #2f4054;
+    color: #feda00;
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing:2px;
+}
+.filter-mobile-only {
+    display: none;
+    width: 0px;
+}
+.filter-overlay {
+    visibility: hidden;
+}
+.search-btn-container {
+    display:none;
+}
+.program-container {
+    padding-left:1em;
+    padding-right:1em;
+}
+.div-search-pc-input {
+    position:relative;
+}
+.div-search-pc-input .ion-ios-search-strong {
+    font-size:22px;
+    position:absolute;
+    top:35%;
+    left:12px;
+}
+.div-search-pc-input .algolia-search-box{
+    padding-left:20px;
+}
+.pc-title {
+    margin: 0.5em 0 0.5em;
+}
+.col-height {
+   height: 60px;
+}
+/* causing issues .structured-result {
+    margin: 50px;
+    background-color: lightblue;
+    padding: 20px;
+    font-size: 25px;
+    line-height: 35px;
+}
+*/
+@media screen and (max-width: 1100px) {
+    #q {
+        width: 760px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #q {
+        text-indent: 15px;
+        width: 100%;
+        height: 46px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #q {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #q {
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #q {
+        width: 95%;
+    }
+}
+
+.select-programs-courses {
+    border: 1px solid #005EB8;
+    border-radius: 20px !important;
+    background-position: right center !important;
+    outline: none !important;
+    font-size: 0.875em !important;
+    flex-basis:180px;
+    margin-left:5px;
+}
+
+    .select-programs-courses select {
+        height: 100px;
+    }
+
+.program-table td {
+    vertical-align: middle;
+}
+
+.table-container-program-title-image {
+    width: 450px;
+    font-size: 18px;
+}
+
+.table-content-program-title {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+    overflow: hidden;
+}
+
+.table-content-program-image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.media-object-sm {
+    float: left;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    /*margin-left:30px; */
+    border: 2px solid #981b2b;
+    border-radius: 100%;
+    margin-right: 20px;
+    margin-top: 4px;
+}
+
+.aoi-programs-table {
+    table-layout: fixed;
+}
+
+#search-results-table tr {
+    margin-bottom: 20px;
+    height: 65px;
+}
+
+.aoi-programs-table tr th:nth-child(1) {
+    width: 35%;
+}
+
+.search-box-container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ais-search-box {
+    flex: 1 1 100%;
+    flex-basis: 300px;
+    padding-bottom:5px;
+}
+
+
+#aoi-clear-filters-btn, .search-programs-courses-clear-filters {
+    font-size: 0.875em;
+    flex-basis: 180px;
+    background-color: transparent !important;
+    border: none;
+    color: #ba2318 !important;
+    display: inline-block;
+    box-shadow: none;
+    font-weight:600;
+    min-width:80px;
+}
+#aoi-clear-filters-btn{
+    text-align:left;
+}
+#aoi-clear-filters-btn .ion-android-refresh {
+    font-size:1em;
+    margin-right:2px;
+}
+.search-programs-courses-clear-filters:focus, .search-programs-courses-clear-filters:hover, .search-programs-courses-clear-filters:visited {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none;
+}
+.search-programs-courses-clear-filters.g-disabled {
+    display: none !important;
+}
+
+.aoi-btn-container button {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aoi-btn-container {
+    text-align: center;
+    clear: both;
+}
+
+.aoi-btn {
+    background-color: #005eb8 !important;
+    border: none !important;
+}
+
+.aoi-btn:hover {
+    border: none !important;
+}
+
+button#aoi-view-programs-courses {
+    margin-right: 60px;
+}
+
+.g-search-bar {
+    margin-bottom: 1.5em !important;
+}
+
+.search-box-container .ais-search-box:after {
+    content: "";
+    width: 34px;
+    height: 39px;
+    background: url("../../../images/algolia/search-icon.png") no-repeat;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    top: 14px;
+    left: 5px;
+}
+
+#search-programs-courses::placeholder {
+    font-weight: 600;
+}
+.program-container .select-facets {
+    display: flex;
+    align-items: center;
+    width: 1177px;
+}
+@media (max-width: 940px) {
+    #search-results-table tr {
+        padding-bottom: 60px;
+        font-size: 0.9em;
+    }
+
+        #search-results-table tr td {
+            padding-left: 0px;
+        }
+
+    .table-content-program-title {
+        padding-left: 0px;
+        padding-top: 15px;
+    }
+}
+
+/* New Styles 
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+button {
+    height: 36px;
+    width: 40px;
+    margin-left: 4px;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    line-height: 1.4;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: white;
+    box-shadow: 0px 1px 2px #bbb;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 3px #666;
+}
+
+button.on {
+    color: white;
+    background-color: #ccc;
+}
+
+
+.wrapper {
+    max-width: 92%;
+    width: 1100px;
+    margin: 10px auto 40px;
+    padding: 20px 20px 0;
+    font-family: Roboto;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+a:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+*/
+
+/* 
+
+GRIDS - Retrofitting old code. 
+
+Edge does not work with grid-template-areas and grid-area, neither of which are used here. 
+
+@supports (display: grid) {} 
+
+Media queries can be nested inside this.
+
+
+*/
+
+#search-results-listgrid a {
+    display: block;
+    transition: 0.2s;
+}
+
+.program-container:after {
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.search-programs-courses-clear-filters {
+    align-self: center;
+    width: 180px;
+    justify-self: center;
+}
+
+.grid-list-icons {
+    height: 20px;
+    cursor: pointer;
+    margin-left: auto;
+    flex-basis: 60px;
+    padding-left: 5px;
+}
+
+.div-aoi-select {
+    flex-basis:180px;
+    margin-right:5px;
+}
+
+.list-view {
+    float: left;
+    background: url("../../../images/algolia/aoi-stack-off.png") no-repeat;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+    margin-left: 10px;
+}
+
+    .list-view.on {
+        float: left;
+        background: url("../../../images/algolia/aoi-stack-on.png") no-repeat;
+        height: 20px;
+        width: 20px;
+        background-size: contain;
+    }
+
+.grid-view {
+    float: left;
+    background: url("../../../images/algolia/aoi-grid-off.png") no-repeat;
+    height: 20px;
+    width: 20px;
+    background-size: contain;
+}
+
+    .grid-view.on {
+        float: left;
+        background: url("../../../images/algolia/aoi-grid-on.png") no-repeat;
+        height: 20px;
+        width: 20px;
+        background-size: contain;
+    }
+
+/* List */
+
+.list .program-outer-container {
+    width:100%;
+}
+
+.list .program-outer-container:nth-child(even) {
+    background-color: #F7F7F8;
+}
+
+.list .program-highlight {
+    /* margin-left: 20px;
+    margin-top: 35px; */
+}
+
+.program-inner-container select.g-form-control {
+    padding-bottom: 5px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE ONLY STYLES 10, 11 */
+
+    .select-programs-courses {
+        border: 1px solid #d9dadc;
+        border-radius: 100px;
+        width: 190px;
+        height: 30px;
+        background-position: left center;
+        padding-left: 30px;
+        outline: none;
+        font-size: 0.9em;
+        float: right !important;
+    }
+    .select-programs-courses {
+        width:120px;
+    }
+    .div-aoi-select {
+        min-width: 180px;
+    }
+
+    .program-inner-container select.g-form-control, .div-aoi-select {
+        flex-basis: auto;
+    }
+
+    .list {
+        font-size: 875em;
+    }
+
+    .program-container .program-inner-container .info-session-col-head {
+        display: inline-block;
+        float: left;
+    }
+
+    .list .program-outer-container {
+        margin-left: 1%;
+        height: 125px;
+    }
+
+    .list .program-highlight {
+        margin-left: 20px;
+        margin-top: 35px;
+    }
+
+    .list .program-inner-container .left {
+        float: left;
+    }
+
+    .list .program-image {
+        float: left;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #981b2b;
+        border-radius: 100%;
+        margin-right: 20px;
+        margin-top: 30px;
+    }
+
+        .list .program-image div {
+            display: none;
+        }
+
+    .list .program-title {
+        margin-top: 35px;
+        width: 18%;
+    }
+
+    .list .program-info-session {
+        float: left;
+        color: #1169BD;
+        padding: 35px 20px 0px 20px;
+        width: 60px;
+    }
+
+    .list .program-info-session-date-label {
+        display: none;
+    }
+
+    .list .program-info-session-date {
+        width: 60px;
+    }
+
+    .list .program-info-session .fa-calendar-o {
+        padding-left: 20px;
+    }
+
+    .list .program-available {
+        padding-left: 40px;
+        width: 10%;
+        text-align: left;
+    }
+
+    .list .program-available-banner {
+        display: none;
+    }
+
+    .list .program-inner-container:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .list .program-offered {
+        padding-left: 40px;
+        width: 15%;
+        text-align: left;
+    }
+
+    .list .program-credential {
+        width: 14%;
+        text-align: left;
+        padding-left: 40px;
+    }
+
+    .list .program-description {
+        display: none;
+    }
+
+    .list .program-highlight i {
+        display: none;
+    }
+
+    .list .program-status {
+        width: 24%;
+        padding-left: 40px;
+    }
+
+    .list .program-status .ion-record {
+        float: left;
+        padding-left: 24%;
+    }
+
+    .list .program-employment {
+        display: none !important;
+    }
+
+    .list .program-salary {
+        display: none !important;
+    }
+}
+
+@supports (display: grid) {
+    /* now best under 1200px */
+
+    .program-container .select-facets .program-title {
+        flex:1;
+        flex-basis:20px;
+    }
+
+    .program-container .select-facets .info-session-col-head {
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        content: "";
+        width: 53px;
+        height: 37px;
+        background: url("../../../images/algolia/info-session-col-head.png") no-repeat;
+        background-size: auto auto;
+        background-size: cover;
+    }
+
+    .select-facets {
+        max-width: 100%;
+    }
+
+    .program-container #label-course-code {
+        font-weight: bold;
+        padding-top: 13px;
+        padding-right: 95px;
+    }
+
+    .list .program-inner-container {
+        min-height: 85px;
+        display: grid;
+        grid-template-columns: 60px 270px 33px 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 18px;
+    }
+
+    .list .program-image-container {
+        grid-column: 1;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+.list .program-inner-container .left {
+    float: left;
+}
+
+.list .program-image {
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #981b2b;
+    border-radius: 100%;
+}
+
+    .list .program-image div {
+        display: none;
+    }
+
+.list .program-new-label {
+    float: right;
+    margin-top: 10px;
+    background-color: #A6192E;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 0.80em;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+@supports (display: grid) {
+    .list .program-title {
+        grid-column: 2;
+        align-self: center;
+    }
+
+    .list .new-program-title {
+        float: left;
+        margin-top: 24px;
+        color: #A6192E;
+        width: 80%;
+    }
+
+    .list .program-info-session {
+        font-size: .675em;
+        grid-column: 3;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        color: #1169BD;
+    }
+}
+
+.list .program-info-session-date-label {
+    display: none;
+    justify-self: center;
+}
+
+.list .program-info-session-date {
+    text-align: center;
+    justify-self: center;
+}
+
+.list .program-info-session .fa-calendar-o {
+    text-align: center;
+    justify-self: center;
+}
+
+@supports (display: grid) {
+    .list .program-available {
+        grid-column: 4;
+        align-self: center;
+        font-size: .875em;
+        padding-left: .875em;
+    }
+
+    .list .program-available-banner {
+        /* Why was this none? display: none; */
+    }
+
+    .list .program-offered {
+        grid-column: 5;
+        align-self: center;
+        font-size: .875em;
+        padding-left: .875em;
+        /* padding-left: 40px;
+        width: 17%; */
+    }
+
+    .list .program-credential {
+        grid-column: 6;
+        align-self: center;
+        font-size: .875em;
+        padding-left: .875em;
+        /* width: 17%;
+        padding-left: 25px; */
+    }
+
+    .list .program-description {
+        display: none;
+    }
+
+    .list .program-highlight i {
+        display: none;
+    }
+
+    .list .program-status {
+        grid-column: 7;
+        align-self: center;
+        font-size: .875em;
+        padding-left: .875em;
+    }
+}
+
+.list .program-status .ion-record {
+    float: left;
+}
+
+.list .program-available-banner {
+    display: none;
+}
+
+.list .program-employment {
+    display: none !important;
+}
+
+.list .program-salary {
+    display: none !important;
+}
+
+/* Grid */
+#search-results-listgrid.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.grid .program-outer-container {
+    margin: 1em;
+    width: 22%;
+    background: #fff;
+    border-radius: 12px;
+    text-align: left;
+    padding-bottom: 25px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    height: 300px; 
+    display: inline-block;
+    overflow: hidden;
+    /*flex-basis: 250px;*/
+    min-width:250px;
+    /*flex-grow: 1;*/
+    max-width: 300px;
+}
+.grid .program-outer-container:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+#search-results-listgrid.grid::after {
+    content: "";
+    width: 22%;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.grid .empty {
+    display: none !important;
+}
+
+.program-inner-container {
+    cursor: pointer;
+}
+
+.grid .program-image-container {
+    /*
+    height: 174px;
+    width: 182px;
+     float: right;
+    */
+    height: 125px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.grid .program-image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: all .4s ease;
+    position: relative;
+}
+
+.grid .program-new-label {
+    position: absolute;
+    width: 50%;
+    text-align: right;
+    color: white;
+    font-size: 10px;
+    right: 0;
+    z-index: 999;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    bottom: 0px;
+}
+.grid .tri-new-label {
+    width: 0;
+    height: 0;
+    border: 45px solid #A6192E;
+    border-left: 45px solid transparent;
+    border-top: 45px solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    border-bottom-right-radius:10px;
+}
+
+.grid .program-outer-container:focus .program-image, .grid .program-outer-container:hover .program-image {
+    transform: scale(1.06);
+}
+
+.grid .program-outer-container:hover .program-available-banner {
+    background-image: linear-gradient(to right, #006aa6, #006aa6, #006aa6, #0078b2, #0086be, #0094c9, #00a2d4);
+    opacity: 1;
+}
+
+.grid .program-image div {
+    color: #FFF;
+    padding: 5px 0px 5px 15px;
+    float: left;
+    margin-top: 47%;
+    opacity: 0.8;
+}
+
+.grid .program-title {
+    padding: 12px 12px 7px 12px;
+    font-size: 14px;
+    color: #005EB8;
+    /* font-weight: bold;
+            color: #565A61;
+    min-height: 60px;*/
+    width: 100%;
+    line-height: 1.1em;
+}
+
+.grid .program-info-session {
+    float: left;
+    color: #cc0000;
+    width: 200px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.grid .program-info-session-date-label {
+    float: left;
+}
+
+.grid .program-info-session .fa-calendar-o {
+    margin-left: 13px;
+    margin-top: 4px;
+    float: left;
+    font-size: 10px;
+    color: #cc0000;
+}
+
+.grid .program-info-session-date {
+    padding-left: 29px;
+    font-size: 11px;
+    letter-spacing: .05em;
+    font-weight: normal;
+}
+
+.grid .program-description {
+    padding: 20px 20px 0px 20px;
+    min-height: 140px;
+    display: none;
+}
+
+.grid .program-highlight {
+    /* display: list-item;
+            color: #005EB8;
+    list-style-position: inside; */
+    color:#565a61;
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 1.35em;
+}
+
+.grid .program-highlight span {
+    margin-left: 1px;
+}
+
+.grid .program-available {
+}
+
+.grid .program-available-banner {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 50%;
+    height: 25px;
+    background-color: #005EB8;
+    color: white;
+    font-size: 11px;
+    border-radius: 0 0 10px 0;
+    padding-top: 3px;
+    padding-left: 10px;
+    transition: all .3s ease;
+    display: none;
+    /* as per Nicole suggestion July 6 */
+}
+
+.grid .program-offered {
+}
+
+.grid .program-credential {
+}
+
+.grid .program-status .ion-record {
+    display: none;
+}
+
+.grid .program-status .ion-record {
+    font-size: 18px;
+}
+
+.grid .program-employment {
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+    font-weight: bold;
+}
+
+    .grid .program-employment img {
+        width: 50px;
+    }
+
+.grid .program-salary {
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+    width: 80px;
+    font-weight: bold;
+}
+
+    .grid .program-salary img {
+        width: 80px;
+    }
+
+#courses-tab {
+    display: none;
+}
+
+@media (max-width: 1199px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .list {
+        font-size: .875em !important;
+    }
+
+        .list .program-status {
+            width: 18%;
+            padding-left: 0px;
+        }
+
+            .list .program-status .ion-record {
+                float: left;
+                padding-left: 18%;
+            }
+
+        .list .program-title {
+            margin-top: 35px;
+            width: 15%;
+        }
+
+    .program-outer-container {
+        overflow: hidden;
+    }
+
+        .program-outer-container::after {
+            clear: both;
+        }
+}
+
+#search-results-listgrid.grid {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-box-container {
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.g-container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.program-container .program-inner-container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ais-search-box .ais-search-box--input {
+    width: 700px;
+}
+
+.grid .program-outer-container {
+    /*width: 356px;
+    margin-right: 48px;*/
+    /*width: 275px;*/
+    border: 1px solid #ddd;
+    max-width: 275px;
+}
+
+.list .program-available {
+    padding-left: 0px;
+}
+
+.list .program-offered {
+    /* padding-left: 25px; */
+}
+
+.list .program-credential {
+    padding-left: 13px;
+}
+
+.list .program-status .program-statuses {
+    margin-top: 0px;
+}
+
+.list .program-status {
+    padding-left: 0px;
+}
+
+/********************* Program structured data ********************/
+.struct-result-register {
+    background-color: #feda00;
+    min-height: 50px;
+    padding:10px;
+}
+
+.struct-result-register .btnlink {
+    color: #344058;
+    font-size: 18px;
+}
+.struct-result-register .btnlink .ion-android-arrow-dropright-circle {
+    color:#000;
+}
+.struct-result-register  .notedesc {
+    font-size:20px;
+    font-weight:600;
+    color:#000;
+}
+
+.transparent-text {
+    background-color: #324053;
+    color: transparent;
+}
+
+.stickyDivBanner {
+    position:fixed;
+    top:60px;
+    width:100%;
+    z-index:100;
+}
+
+.sticky .struct-result-register {
+    min-height: 50px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.showDesktoptxt{
+    display:inline-block;
+}
+@media(max-width:950px) {
+    .struct-result-register .btnlink, .notetext {
+        font-size:16px;
+    }
+    .notedesc{
+        font-size:18px;
+    }
+}
+@media(max-width: 815px) {
+    .banner-flex {
+        flex-direction:column;
+    }
+    .notetext {
+        display:none;
+    }
+    .banner-flex {
+        align-items:flex-start;
+    }
+    .banner-flex > div:nth-child(2) {
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    .showDesktoptxt {
+        display:none;
+    }
+    .spnDate {
+        white-space:nowrap;
+    }
+}
+
+/*@media (max-width: 1199px) {
+    .grid .program-outer-container {
+        width: 340px;
+        margin-right: 29px;
+    }
+}*/
+
+@media (max-width: 1099px) {
+    #search-results-listgrid.grid {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .grid .program-outer-container {
+        width: 31.33333%;
+    }
+
+
+
+    .ais-search-box .ais-search-box--input {
+        width: 660px;
+    }
+
+    .list .program-outer-container {
+        height: auto;
+    }
+
+    .list .program-offered {
+    }
+
+    .list .program-credential {
+    }
+
+    .list .program-status {
+    }
+
+        .list .program-status .ion-record {
+            padding-left: 0%;
+        }
+
+        .list .program-status .program-statuses:nth-child(n+2) {
+            margin-top: 5px;
+        }
+}
+
+@media (max-width: 995px) {
+    #search-results-listgrid.grid {
+        width: 100%;
+    }
+
+    .ais-search-box .ais-search-box--input {
+        width: 90%;
+    }
+
+    .search-programs-courses-container .ais-search-box {
+        margin: 0 !important;
+    }
+
+
+
+    .grid .program-outer-container {
+        width: 22%; 
+    }
+
+    .program-container .select-facets {
+        max-width: 100%;
+    }
+
+    @supports (display: grid) {
+
+        .program-container .program-inner-container .program-title, .program-container .program-inner-container .info-session-col-head {
+            display: none;
+        }
+
+        /*
+        #search-results-listgrid .list .program-info-session {
+            display: none;
+        }*/
+
+        .list .program-inner-container {
+            grid-gap: 10px;
+            grid-template-columns: 50px 210px 30px 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    .list .program-title, .list .program-available, .list .program-offered, .list .program-credential, .list .program-status {
+        font-size: .75em;
+    }
+
+    .list .program-info-session a {
+        font-size: .5em;
+    }
+
+    .list .program-offered, .list .program-credential, .list .program-status {
+        padding-left: 0;
+    }
+}
+
+@media (max-width:950px) {
+    .program-inner-container.select-facets {
+        position: fixed;
+        right: 0;
+        background-color: #fff;
+        width: 70%;
+        max-width: 270px;
+        height: 100%;
+        top: 0;
+        z-index: 9999;
+        flex-direction: column;
+        justify-content: flex-start;
+        display: none;
+    }
+
+    .div-aoi-select, .select-programs-courses {
+        flex-basis: auto;
+    }
+
+    .program-inner-container select.g-form-control {
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        max-width: 220px;
+        width: 100%;
+    }
+
+    .filter-mobile-only {
+        padding: 12px 26px;
+        width: 100%;
+        background-color: #F6F7F9;
+        margin-bottom: 20px;
+        text-align: left;
+        height: 50px;
+        display: none;
+    }
+
+    .filter-mobile-only h4 {
+        color: #A6192E;
+    }
+
+    .filter-overlay {
+        position: fixed;
+        background-color: rgba(0,0,0,0.5);
+        height: 100%;
+        width: 100%;
+        z-index: 9999;
+        top: 0;
+        visibility:hidden;
+    }
+
+    .filter-on {
+        display: inline-block !important;
+    }
+
+    .filter-ol-on {
+        visibility:visible;
+    }
+
+    .search-btn-container {
+        display: inline-block;
+    }
+
+    .search-box-container {
+        flex-wrap: wrap;
+    }
+
+    .ais-search-box {
+        flex: 0 0 100% !important;
+        padding-bottom: 10px !important;
+    }
+
+    .search-programs-courses-clear-filters {
+        margin-left: 1em;
+    }
+
+    #aoi-clear-filters-btn {
+        display: none;
+    }
+
+    .select-programs-courses {
+        font-size: 16px !important;
+    }
+    .search-programs-courses-clear-filters {
+        font-size: .92em;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 900px) {
+
+    #search-results-listgrid.grid {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 860px){
+
+    #search-results-listgrid.grid {
+        width: 90%;
+    }
+    .grid .program-outer-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 720px) {
+    #search-results-listgrid.grid {
+        width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .grid .program-outer-container {
+        width: 320px;
+    }
+    .list .program-title, .list .program-available, .list .program-offered, .list .program-credential, .list .program-status {
+        font-size: .675em;
+        line-height: 1.1em;
+    }
+
+    .list .program-new-label {
+        margin-top: -50px;
+        font-size: 0.65em;
+    }
+
+
+    .aoi-btn-container button {
+        margin-top: 20px;
+        display: inline-block
+    }
+
+
+    button#aoi-view-programs-courses {
+        margin-right: 0;
+    }
+
+    @supports (display: grid) {
+        .list .program-inner-container {
+            grid-gap: 10px;
+            grid-template-columns: 50px 1.5fr 30px 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    .search-programs-courses-clear-filters {
+        width: auto;
+    }
+
+    .search-programs-courses-container .ais-search-box {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 690px) {
+    #search-results-listgrid.grid {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .list .program-new-label {
+        margin-top: -55px;
+    }
+
+    .grid .program-outer-container {
+        width: 45%;
+    }
+    .g-form-control {
+        padding: 5px 10px;
+    }
+
+    .select-programs-courses {
+        font-size: .7em;
+    }
+}
+@media (max-width: 655px){
+    .grid .program-outer-container {
+        width: 42%;
+    }
+}
+@media (max-width: 610px) {
+    #search-results-listgrid.grid {
+        width: 100%;
+        max-width:350px;
+    }
+
+    .grid .program-outer-container {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 547px) {
+    .list .program-new-label {
+        margin-top: -50px;
+        font-size: 0.60em;
+    }
+}
+
+@supports (display: grid) {
+    @media (max-width: 500px) {
+        .ais-search-box {
+            width: 86%;
+        }
+
+        .ais-search-box .ais-search-box--input {
+            width: 87%;
+        }
+
+        .list .program-title, .list .program-available, .list .program-offered, .list .program-credential, .list .program-status {
+            font-size: .875em;
+        }
+
+        .list .program-new-label {
+            margin-top: 10px;
+        }
+
+        /*.program-container .program-inner-container select.g-form-control {
+            display: none !important;
+        }*/
+        .g-container {
+            width: 100%;
+            padding: auto 1em;
+        }
+
+        .list .program-inner-container {
+            grid-gap: 20px;
+            grid-template-columns: 50px 1fr 50px;
+        }
+
+        .list .program-available {
+            grid-column: none;
+            display: none;
+        }
+
+        .list .program-offered, .list .program-credential, .list .program-status {
+            grid-column: none;
+            display: none;
+        }
+
+        /* HIDE FILTERS
+           HIDE STATUS, CREDENTIAL, OFFERED
+
+           RESIZE INPUT -*/
+    }
+}
+
+@media (max-width: 365px) {
+    #search-results-listgrid.grid {
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .grid .program-outer-container {
+        width: 300px;
+    }
+}
+
+@media (max-width: 335px) {
+    #search-results-listgrid.grid {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .grid .program-outer-container {
+        width: 280px;
+    }
+}
+
+#programs-courses-tabs {
+    height: 60px;
+    width: 600px;
+    border-bottom: 3px solid #E3E3E5;
+    /*border-top: 3px solid #E3E3E5;*/
+}
+
+.programs-courses-tab {
+    color: #003f7b;
+    margin-right: 2.2em;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+    font-weight: 600;
+    padding-top: 28px;
+}
+
+    .programs-courses-tab:hover {
+        color: #a6192e;
+    }
+
+    .programs-courses-tab.g-active {
+        color: #a6192e !important;
+        border-bottom: 3px solid #a6192e !important;
+    }
+
+@media screen and (max-width: 599px) {
+    #new-tab {
+        display: none;
+    }
+}

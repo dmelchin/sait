@@ -1,0 +1,1 @@
+function showCourses(){$("body").addClass("showCourses"),$("body").removeClass("showPrograms"),$("#coursesTab").addClass("g-active"),$("#programsTab").removeClass("g-active")}function showPrograms(){$("body").removeClass("showCourses"),$("body").addClass("showPrograms"),$("#coursesTab").removeClass("g-active"),$("#programsTab").addClass("g-active")}

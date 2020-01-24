@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Global Mixins
+   ========================================================================== */
+
+@mixin border-radius($radius: $border-radius) {
+	border-radius: $radius;
+}
+
+// Box shadow
+@mixin box-shadow($shadow: $box-shadow) {
+	box-shadow: $shadow;
+}
+
+// Clearfix
+@mixin clearfix() {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0; 
+}
+
+// Box sizing
+@mixin box-sizing($box-sizing) {
+  box-sizing: $box-sizing;
+}
+
+// Center-align a block level element
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: #{alpha(opacity=$opacity-ie)};
+}
+
+// Transitions
+@mixin transition($transition: $transition1-default) {
+  transition: $transition;
+}
+
+@mixin transition2($transition: $transition2-default) {
+  transition: $transition;
+}
+
+@mixin transition3($transition: $transition3-default) {
+  transition: $transition;
+}
+
+// Responsiveness
+@mixin sm{
+  @media (max-width: #{$max-break-mobile}){
+     @content;
+  }
+}
+
+@mixin md{
+  @media (max-width: #{$max-break-mobile-nav}){
+     @content;
+  }
+}
+
+@mixin lg{
+  @media (max-width: #{$max-break-tablet}){
+     @content;
+  }
+}
+
+@mixin xlg{
+  @media (min-width: #{$min-break-desktop}){
+     @content;
+  }
+}
+
+// Jonathon very specific use
+@mixin smallscreen{
+  @media (max-width: 375px){
+    @content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@mixin tab{
+  @media (max-width: 900px){
+    @content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@mixin larger{
+  @media (min-width: 901px){
+    @content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@mixin xlarger{
+  @media (min-width: 1040px){
+    @content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

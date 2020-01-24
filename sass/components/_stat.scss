@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Stats
+   ========================================================================== */
+
+//general progam/course stats
+.g-stat{
+	text-align: center;
+	font-weight: 700;
+	margin-top: 2em;
+    background-repeat: no-repeat;
+    background-size: 90px;
+    background-position: 60% 0px;
+    padding-top: 30px;
+
+	> div{
+		font-size: 2.8em;
+		line-height: 1em;
+	}
+	p{
+		color: $grey-3;
+		margin-top: 5px;
+		@extend .g-font-larger;
+	    line-height: 1.3em;
+	}
+	@media (max-width: $max-break-mobile) {
+		margin-top: 0;
+	}
+}
+
+
+//homepage slider interest stat
+.g-interest-stat{
+	position: relative;
+    margin-top: 15px;
+	@extend .g-font-small;
+	> div:first-child{
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		line-height: 38px;
+		border: 1px solid #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+		+ div{
+			padding-left: 50px;
+			height: 50px;
+			line-height: 20px;
+		}
+	}
+}
+
+.g-stat-blue
+{
+    background-image: url("/assets/images/stat-blue-bg.png");
+}
+
+.g-stat-red
+{
+    background-image: url("/assets/images/stat-red-bg.png")
+}

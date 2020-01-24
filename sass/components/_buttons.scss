@@ -1,0 +1,277 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+*[class*="g-btn"] {
+    position: relative;
+    display: inline-block;
+    padding: $btn-padding;
+    margin-bottom: 0;
+    font-size: $btn-font-size;
+    line-height: $btn-line-height;
+    height: $btn-height;
+    text-align: $btn-text-align;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-color: $btn-bg;
+    background-size: 200%;
+    background-position: center center;
+    border: none;
+    border-radius: $btn-border-radius;
+    font-family: $btn-font-family;
+    color: $btn-color;
+    border: 1px solid $btn-border;
+    text-decoration: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: $body-font-weight-extra-bold;
+    @extend .transition;
+
+    &.g-btn-block {
+        width: 100%;
+    }
+
+    &.g-btn-sm {
+        padding: $btn-sm-padding;
+        font-size: $btn-sm-font-size;
+        line-height: $btn-sm-line-height;
+        height: $btn-sm-height;
+        text-transform: none;
+        font-weight: 600;
+    }
+
+    &.g-btn-lg {
+        padding: $btn-lg-padding;
+        font-size: $btn-lg-font-size;
+        line-height: $btn-lg-line-height;
+        height: $btn-lg-height;
+        background-color: $btn-bg !important;
+        color: $btn-color !important;
+    }
+
+    &.g-btn-square {
+        border-radius: 0px;
+    }
+
+    &:visited {
+    }
+
+    &:hover, &:focus {
+        text-decoration: none;
+        box-shadow: 1px 1px 7px rgba(0,0,0,.4);
+        border: none;
+        color: $btn-hover-color !important;
+        background-color: $btn-hover-bg !important;
+        border: 1px solid $btn-hover-border;
+        outline: 0;
+    }
+
+    &:active, &.g-active {
+        text-decoration: none;
+        background: $btn-active-bg !important;
+        border: none;
+        color: $btn-active-color;
+        border: 1px solid $btn-active-border !important;
+    }
+
+    &.g-btn-2 {
+        background: $btn-2-bg !important;
+        border: 1px solid $btn-2-border;
+        color: $btn-2-color !important;
+
+        &:hover, &:focus {
+            background: $btn-2-hover-bg !important;
+            border: 1px solid $btn-2-hover-border;
+            color: $btn-2-hover-color !important;
+        }
+
+        &:active, &.g-active {
+            background: $btn-2-active-bg !important;
+            border: 1px solid $btn-2-active-border;
+            color: $btn-2-active-color !important;
+        }
+    }
+
+    &.g-btn-3 {
+        background: $btn-3-bg !important;
+        border: 1px solid $btn-3-border;
+        color: $btn-3-color !important;
+
+        &:hover, &:focus {
+            background: $btn-3-hover-bg !important;
+            border: 1px solid $btn-3-hover-border;
+            color: $btn-3-hover-color !important;
+            box-shadow: none;
+        }
+
+        &:active, &.g-active {
+            background: $btn-3-active-bg !important;
+            border: 1px solid $btn-3-active-border;
+            color: $btn-3-active-color !important;
+            box-shadow: none;
+        }
+    }
+
+    &.g-btn-4 {
+        background: $btn-4-bg !important;
+        border: none;
+        color: $btn-4-color !important;
+
+        &:hover, &:focus {
+            background: $btn-4-hover-bg !important;
+            border: none;
+            color: $btn-4-hover-color !important;
+            box-shadow: none;
+        }
+
+        &:active, &.g-active {
+            background: $btn-4-active-bg !important;
+            border: none;
+            color: $btn-4-active-color !important;
+            box-shadow: none;
+        }
+    }
+
+    &.g-btn-5 {
+        background: $btn-5-bg !important;
+        border: 1px solid $btn-5-border;
+        color: $btn-5-color !important;
+
+        &:hover, &:focus {
+            background: $btn-5-hover-bg !important;
+            border: 1px solid $btn-5-hover-border;
+            color: $btn-5-hover-color !important;
+            box-shadow: none;
+        }
+
+        &:active, &.g-active {
+            background: $btn-5-active-bg !important;
+            border: 1px solid $btn-5-active-border;
+            color: $btn-5-active-color !important;
+            box-shadow: none;
+        }
+    }
+
+    &.g-btn-6 {
+        background: $btn-6-bg !important;
+        border: 1px solid $btn-6-border;
+        color: $btn-6-color !important;
+
+        &:hover, &:focus {
+            background: $btn-6-hover-bg !important;
+            border: 1px solid $btn-6-hover-border;
+            color: $btn-6-hover-color !important;
+            box-shadow: none;
+        }
+
+        &:active, &.g-active {
+            background: $btn-6-active-bg !important;
+            border: 1px solid $btn-6-active-border;
+            color: $btn-6-active-color !important;
+            box-shadow: none;
+        }
+    }
+
+    &.g-btn-6:visited {
+        color: $btn-6-color !important;
+    }
+
+
+    &.g-disabled {
+        opacity: .45;
+        pointer-events: none;
+    }
+}
+
+.g-btn {
+    color: $btn-color !important;
+    background-color: $btn-bg !important;
+}
+
+//---------------------- Button Groups -------------------------
+
+.g-group{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	*[class*="g-btn"]{
+		border-radius: 0;
+		float: left;
+	}
+	*[class*="g-btn"]:not(:last-child){
+		border-right: none;
+	}
+	:first-child{
+		border-radius: $btn-border-radius 0 0 $btn-border-radius;
+		margin-left: 0;
+	}
+	:last-child{
+		border-radius: 0 $btn-border-radius $btn-border-radius 0;
+	}
+	&.g-check{
+		> :last-child{
+			border-left: 1px solid rgba(255, 255, 255, 0.2);
+		    line-height: 28px;
+    		height: 30px;
+			padding: 0 10px;
+			span{
+				font-size: 18px;
+			}
+		}
+	}
+	&:after{
+		@include clearfix();
+	}
+}
+
+//---------------------- Button Toggle -------------------------
+
+.g-toggle{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	*[class*="g-btn"]{
+		border-radius: 0;
+		float: left;
+	}
+	:first-child{
+		border-radius: $btn-border-radius 0 0 $btn-border-radius;
+		margin-left: 0;
+	}
+	:last-child{
+		border-radius: 0 $btn-border-radius $btn-border-radius 0;
+		margin-left: -1px;
+	}
+	&:after{
+		@include clearfix();
+	}
+}
+
+//---------------------- Test input with button -------------------------
+
+.g-input-btn{
+	position: relative;
+	.g-form-control{
+		padding-right: 100px;
+	}
+	*[class*="g-btn"]{
+		position: absolute;
+		right:0;
+		bottom: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: $input-border-radius;
+		border-bottom-right-radius: $input-border-radius;
+	}
+}
+
+
+
+
+
+
+

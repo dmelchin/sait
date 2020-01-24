@@ -1,0 +1,319 @@
+/* ==========================================================================
+   General Styling
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// Body reset
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    background-color: $bg-color-1;
+    transition: right linear 300ms;
+    right: 0;
+    position: relative;
+    font-family: $body-font;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    //tooltipster bug fix
+    overflow-x: visible !important;
+    &.fixed-header {
+        padding: 103px 0 0 0;
+    }
+    b,
+    strong {
+        font-weight: $body-font-weight-bold;
+    }
+    @media (max-width: $max-break-tablet) {
+        font-size: 95%;
+    }
+    @media (max-width: $max-break-mobile) {
+        font-size: 88%;
+    }
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+// Links
+a {
+    color: $link-color;
+    text-decoration: none;
+    cursor: pointer;
+    @extend .transition;
+    font-weight: $body-font-weight-bold;
+    &:visited {
+        color: $link-color-visited;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: $link-color-hover;
+        outline: none;
+    }
+    &.g-disabled {
+        opacity: .4;
+        pointer-events: none;
+    }
+}
+
+//social links
+
+.g-social-icons{
+    a{
+        padding: 4px;
+        font-size: 25px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover{
+            color: $brand-1;
+        }
+    }
+    span, a{
+        display: inline-block;
+        line-height: 36px;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+}
+
+a.g-partner{
+    //-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    opacity: .7;
+    &:hover{
+        //-webkit-filter: none; /* Chrome, Safari, Opera */
+        filter: none;
+        opacity: 1;
+    }
+}
+
+.g-icon-open {
+    color: $green;
+    font-size: .7em;
+}
+
+.g-icon-closed {
+    color: $red;
+    font-size: .7em;
+}
+
+.g-icon-waitlisted {
+    color: $yellow;
+    font-size: .7em;
+}
+
+.g-icon-ongoing {
+    color: $blue;
+    font-size: .7em;
+}
+
+.g-icon-pending {
+    color: $grey-5;
+    font-size: .7em;
+}
+
+.ion-link{
+    font-size: 1.2em;
+    line-height: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid $border-color;
+    margin: 1em 0;
+}
+
+hr.g-secondary {
+    border: none;
+    border-top: 2px solid $brand-1;
+    margin: 2em auto;
+}
+
+p {
+    margin: .4em 0 .8em 0;
+    line-height: $p-line-height;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p.g-drop-cap:first-letter {
+    float: left;
+    font-size: 3.5em;
+    line-height: .8em;
+    padding-right: 5px;
+}
+
+//lists
+ul,
+ol {
+    margin: .4em 0 .8em 0;
+    li {
+        margin-bottom: 0.6em;
+    }
+    ul,
+    ol {
+        margin: 0.4em 0 0.6em 0;
+    }
+}
+
+ul.g-basic{
+    padding: 0;
+    list-style-type: none;
+}
+
+ol{
+    padding-left: 25px;
+}
+
+ul.g-split-list{
+    @media (min-width: $min-break-mobile) {
+        padding-left: 2.2em;
+        ul{
+            padding-left: 2.2em;  
+        }
+        >li{
+            width: 50%;
+            float: left;
+            &:nth-child(odd){
+                padding-right: 3em;
+            }
+        }
+        &:after{
+            @include clearfix();
+        }
+    }
+}
+
+table {
+    margin: .4em 0 .8em 0;
+}
+
+.g-overlay {
+    -webkit-overflow-scrolling: auto; /* stop scrolling immediately */
+    @include mui-animation(fade);
+    animation-duration: 200ms;
+    display: none;
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(0,0,0,.8);
+}
+
+.g-scroll-up{
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgba(0,0,0,.1);
+    color: #d9dadc;
+    color: rgba(255,255,255,.8);
+    z-index: 1000;
+    &:hover{
+       color: #fff; 
+    }
+}
+
+// anchors (used for how to apply interactive to handle the fixed header for anchor links)
+.anchor{
+    padding-top: 55px; 
+    margin-top: -40px;
+}
+
+/* ==========================================================================
+   Web Styleguide
+   ========================================================================== */
+
+pre {background-color: #f5f5f5;border: 1px solid #ccc;border-radius: 4px;color: #333;display: block;font-family: Menlo,Monaco,Consolas,Courier New,monospace;font-size: 15px;line-height: 1.5;margin: 1.5em 0 4em;overflow-x: auto;padding: 12px;white-space: pre;}
+.testing-unit {background-color: #324053;height: 50px;}
+.testing-bg {border: 1px solid #d9dadc;height: 50px;}
+.g-bg-1 {background-color: #fff;}
+.g-bg-2 {background-color: #f7f7f8;}
+.g-bg-3 {background-color: #f6f7f9;}
+.g-bg-4 {background-color: #1c232c;}
+.g-bg-brand-1 {background-color: #a6192e;}
+.g-bg-brand-2 {background-color: #6d2077;}
+.g-bg-brand-3 {background-color: #005eb8;}
+.g-bg-brand-4 {background-color: #00a3e0;}
+.g-bg-brand-5 {background-color: #da291c;}
+.g-bg-grey-1 {background-color: #201f1f;}
+.g-bg-grey-2 {background-color: #324053;}
+.g-bg-grey-3 {background-color: #565a61;}
+.g-bg-grey-4 {background-color: #767c86;}
+.g-bg-grey-5 {background-color: #d9dadc;}
+
+
+/* ==========================================================================
+   Corporate Engagement Styles
+   ========================================================================== */
+
+ul.g-inline{
+    @media (min-width: $min-break-mobile) {
+        li{
+            display: inline-block;
+            margin-right: 30px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.g-img-link{
+    &:hover, &:focus{
+        opacity: .6;
+    }
+}
+
+hr.g-tertiary{
+    border: none;
+    border-top: 2px solid $grey-5;
+    margin: 0 0 1.3em;
+}
+
+.g-social-icons.g-secondary{
+    a{
+        color: $bg-color-4;
+        &:hover, &:focus{
+            color: $brand-1;
+        }
+    }
+}
